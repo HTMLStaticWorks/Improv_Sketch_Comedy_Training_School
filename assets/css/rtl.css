@@ -1,0 +1,114 @@
+/* ==========================================================================
+   THE SETUP - IMPROV & SKETCH COMEDY TRAINING SCHOOL
+   RTL (Right-To-Left) Stylesheet for Arabic / Hebrew
+   ========================================================================== */
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .skip-link {
+  left: auto;
+  right: 16px;
+}
+
+[dir="rtl"] .auth-top-actions {
+  left: 20px !important;
+  right: auto !important;
+}
+
+@media (max-width: 639.98px) {
+  [dir="rtl"] .auth-top-actions {
+    left: 14px !important;
+    right: auto !important;
+  }
+}
+
+/* Header & Navigation Mirrored & Perfectly Aligned */
+[dir="rtl"] .header-container {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+[dir="rtl"] .site-nav {
+  flex-direction: row;
+  align-items: center;
+  gap: 28px;
+}
+
+[dir="rtl"] .nav-links {
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+  padding: 0;
+  margin: 0;
+}
+
+[dir="rtl"] .header-actions {
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Card Rules still require strictly center-aligned text & icons per Section 6 */
+[dir="rtl"] .theatre-card {
+  text-align: center;
+  align-items: center;
+}
+
+[dir="rtl"] .card-title,
+[dir="rtl"] .card-subtitle,
+[dir="rtl"] .card-description {
+  text-align: center;
+}
+
+/* Card badges flipped to top-left */
+[dir="rtl"] .card-badge {
+  right: auto;
+  left: 12px;
+}
+
+/* Toast Notification positioned on bottom-left */
+[dir="rtl"] .theatre-toast {
+  right: auto;
+  left: 24px;
+}
+
+/* Form inputs & labels mirrored */
+[dir="rtl"] .form-group {
+  text-align: right;
+}
+
+[dir="rtl"] .form-control {
+  text-align: right;
+}
+
+/* FAQ question layout mirrored */
+[dir="rtl"] .faq-question {
+  text-align: right;
+  flex-direction: row-reverse;
+}
+
+/* Curtains reversed */
+[dir="rtl"] .curtain-drape-left {
+  left: auto;
+  right: 0;
+  clip-path: polygon(100% 0, 0 0, 40% 100%, 100% 100%);
+}
+
+[dir="rtl"] .curtain-drape-right {
+  right: auto;
+  left: 0;
+  clip-path: polygon(100% 0, 0 0, 0 100%, 60% 100%);
+}
+
+/* Footer links mirrored */
+[dir="rtl"] .footer-links-list a:hover {
+  padding-left: 0;
+  padding-right: 4px;
+}
+
+[dir="rtl"] .footer-bottom {
+  flex-direction: row-reverse;
+}

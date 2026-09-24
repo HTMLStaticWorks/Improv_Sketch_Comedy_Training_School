@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thesetupcomedy.example.com/sitemap.xml

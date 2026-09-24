@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comedy Is a Skill. We Teach It. — The Setup School</title>
+  <meta name="description" content="Discover our unique comedic methodology at The Setup. From corporate workshops to conservatory tracks, explore studio life and learn our 3-step path to the stage.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css" id="rtl-stylesheet" disabled>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "The Setup - Conservatory & Comedy Lab",
+    "description": "Innovative comedic training conservatory focusing on applied improvisation, sketch writing laboratories, and executive team dynamics.",
+    "url": "https://thesetupcomedy.example.com/pages/home-2.html"
+  }
+  </script>
+</head>
+<body>
+  <!-- WCAG Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Marquee Navigation -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="site-logo" aria-label="The Setup Comedy School Home">
+        <div class="logo-badge">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8a4 4 0 0 1 4-4h1a4 4 0 0 1 4 4v3a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5V8z"/><circle cx="6" cy="9" r="1" fill="currentColor"/><circle cx="9" cy="9" r="1" fill="currentColor"/><path d="M5.5 12.5a2.5 2.5 0 0 0 4 0"/><path d="M12 6.5a3.5 3.5 0 0 1 3.5-3.5h1A3.5 3.5 0 0 1 20 6.5v3a4.5 4.5 0 0 1-4.5 4.5"/><circle cx="15.2" cy="8.2" r="0.8" fill="currentColor"/><circle cx="18.2" cy="8.2" r="0.8" fill="currentColor"/><path d="M15.2 12a2 2 0 0 1 3 0"/></svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">THE SETUP</span>
+          <span class="logo-sub">Conservatory & Comedy Lab</span>
+        </div>
+      </a>
+
+      <!-- 4-5 Core Nav Items -->
+      <nav class="site-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home 1</a></li>
+          <li><a href="home-2.html" class="nav-link active">Home 2</a></li>
+          <li><a href="classes.html" class="nav-link">Classes</a></li>
+          <li><a href="shows.html" class="nav-link">Shows</a></li>
+          <li><a href="instructors.html" class="nav-link">Instructors</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- Login and Dashboard Buttons -->
+        <div class="header-actions">
+          <!-- Utility Toggles -->
+          <button class="utility-btn theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Dark/Light Mode">
+            <span class="theme-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </span>
+          </button>
+          <button class="utility-btn rtl-toggle-btn" aria-label="Toggle RTL layout" title="Toggle RTL layout">
+            <span style="font-weight: 700; font-size: 0.8rem;">RTL</span>
+          </button>
+
+          <!-- Login and Dashboard Buttons (LAST) -->
+          <a href="login.html" class="btn btn-sm btn-login nav-login-btn">Login</a>
+          <a href="dashboard.html" class="btn btn-sm btn-dashboard nav-dashboard-btn">Dashboard</a>
+        </div>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="menu-toggle" aria-label="Toggle Mobile Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ====================================================================
+         SECTION 1: HERO (Interactive Split-Screen "Pick Your Comedy Path")
+         Distinct Headline: "Comedy Is a Skill. We Teach It."
+         ==================================================================== -->
+    <section class="hero-home2">
+      <!-- 3D Canvas Background -->
+      <div class="stage-canvas-container" aria-hidden="true">
+        <canvas class="stage-canvas"></canvas>
+      </div>
+
+      <div class="container" style="position: relative; z-index: 10;">
+        <div class="home2-grid">
+          <!-- Lead Column -->
+          <div class="home2-lead">
+            <span class="section-tag gold">THE CRAFT OF COMEDY</span>
+            <h1>COMEDY IS A SKILL. <span>WE TEACH IT.</span></h1>
+            <p>
+              Great comedy isn't born from nervous luck or chance. It is an engineered craft of pattern recognition, emotional authenticity, and rapid ensemble agreements. Whether you desire the spontaneous thrill of improv or the satirical precision of sketch writing, our laboratory awaits.
+            </p>
+            <div class="home2-cta-buttons" style="display: flex; gap: 16px; flex-wrap: wrap;">
+              <a href="classes.html" class="btn btn-lg btn-primary">Find Your Class Cohort</a>
+              <a href="#how-to-join" class="btn btn-lg btn-outline-gold">How Enrollment Works</a>
+            </div>
+          </div>
+
+          <!-- Interactive Path Selector Widget -->
+          <div>
+            <div class="path-selector-widget">
+              <div style="text-align: center; margin-bottom: 16px;">
+                <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--spotlight-gold); font-weight: 700;">Interactive Guide</span>
+                <h3 style="font-size: 1.3rem; margin-top: 4px;">Pick Your Comedy Focus</h3>
+              </div>
+
+              <div class="path-selector-tabs">
+                <button class="path-tab-btn active" data-target="path-improv">🎭 Long-Form Improv</button>
+                <button class="path-tab-btn" data-target="path-sketch">✍️ Sketch Writing</button>
+              </div>
+
+              <!-- Panel 1: Improv -->
+              <div class="path-content-panel active" id="path-improv">
+                <p style="font-size: 0.94rem; color: var(--marquee-cream-muted); line-height: 1.6;">
+                  Step on stage with zero script. Learn Chicago-style long-form scene mechanics, active listening, and the courage to say "Yes, And" in real time.
+                </p>
+                <div class="path-feature-list">
+                  <div class="path-feature-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Instant spontaneous reflexes & stage presence</span>
+                  </div>
+                  <div class="path-feature-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Mastering the "Game of the Scene"</span>
+                  </div>
+                  <div class="path-feature-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Mainstage Harold ensemble showcases</span>
+                  </div>
+                </div>
+                <div style="text-align: center; margin-top: 16px;">
+                  <a href="classes.html" class="btn btn-sm btn-gold" style="width: 100%;">Explore Improv Levels (1–4)</a>
+                </div>
+              </div>
+
+              <!-- Panel 2: Sketch -->
+              <div class="path-content-panel" id="path-sketch">
+                <p style="font-size: 0.94rem; color: var(--marquee-cream-muted); line-height: 1.6;">
+                  From pitch meetings to late-night packets. Master scene structures, comedic heightening, parody mechanics, and table-read rewrites.
+                </p>
+                <div class="path-feature-list">
+                  <div class="path-feature-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Writers' room simulation & live table reads</span>
+                  </div>
+                  <div class="path-feature-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Premise generation & blackout gag timing</span>
+                  </div>
+                  <div class="path-feature-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Fully staged student sketch revue production</span>
+                  </div>
+                </div>
+                <div style="text-align: center; margin-top: 16px;">
+                  <a href="classes.html" class="btn btn-sm btn-gold" style="width: 100%;">Explore Sketch Labs</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 2: OUR TEACHING PHILOSOPHY (Narrative Section)
+         ==================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Methodology</span>
+          <h2>The Architecture of the Laugh</h2>
+          <div class="marquee-divider">
+            <span class="line"></span>
+            <span class="bulb"></span>
+            <span class="bulb"></span>
+            <span class="bulb"></span>
+            <span class="line"></span>
+          </div>
+          <p>We reject "trying to be clever" or forcing punchlines. Our pedagogical model is built on three unbreakable pillars of truthful comedic performance.</p>
+        </div>
+
+        <div class="card-grid grid-3">
+          <div class="theatre-card">
+            <div class="card-image-wrap">
+              <img src="../assets/images/pillar-agreement.jpg" alt="Improv performers establishing agreement on stage" width="400" height="250" loading="lazy">
+            </div>
+            <div class="card-subtitle">Pillar One</div>
+            <h3 class="card-title">Agreement Precedes Comedy</h3>
+            <p class="card-description">
+              You cannot find the absurd until you establish the normal. By building instant reality with your scene partner, any small eccentric shift explodes with authentic comedic impact.
+            </p>
+          </div>
+
+          <div class="theatre-card">
+            <div class="card-image-wrap">
+              <img src="../assets/images/pillar-emotion.jpg" alt="Expressive comedic performer showing authentic emotion on stage" width="400" height="250" loading="lazy">
+            </div>
+            <div class="card-subtitle">Pillar Two</div>
+            <h3 class="card-title">Emotion Over Witty Jokes</h3>
+            <p class="card-description">
+              Audiences connect with vulnerability. When a character genuinely cares about an absurd premise, the audience laughs with their soul rather than merely smirking at a pun.
+            </p>
+          </div>
+
+          <div class="theatre-card">
+            <div class="card-image-wrap">
+              <img src="../assets/images/pillar-escalation.jpg" alt="Dynamic ensemble of improv performers heightening comedy stakes" width="400" height="250" loading="lazy">
+            </div>
+            <div class="card-subtitle">Pillar Three</div>
+            <h3 class="card-title">Rigorous Escalation</h3>
+            <p class="card-description">
+              A funny idea must never stay static. We teach students how to identify the "Game", heightening stakes through repetition, justification, and thematic callbacks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 3: STUDIO LIFE / BEHIND THE SCENES (Gallery Style)
+         ==================================================================== -->
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag gold">Inside The Laboratory</span>
+          <h2>Studio Life & Behind The Scenes</h2>
+          <div class="marquee-divider">
+            <span class="line"></span>
+            <span class="bulb"></span>
+            <span class="bulb"></span>
+            <span class="bulb"></span>
+            <span class="line"></span>
+          </div>
+          <p>Where comedic characters are hatched, scripts are marked with red pens, and ensemble bonds are forged.</p>
+        </div>
+
+        <div class="card-grid grid-3">
+          <div class="theatre-card dark-style">
+            <div class="card-image-wrap">
+              <img src="../assets/images/home2-sketch-lab.webp" alt="Improv rehearsal in session" width="400" height="250" loading="lazy">
+            </div>
+            <div class="card-subtitle">Rehearsal Hall A</div>
+            <h3 class="card-title">Thursday Night Scene Lab</h3>
+            <p class="card-description">Our black box studios feature sprung hardwood floors and theater acoustics specifically tuned for voice projection.</p>
+          </div>
+
+          <div class="theatre-card dark-style">
+            <div class="card-image-wrap">
+              <img src="../assets/images/class-sketch-writing.webp" alt="Writers room session" width="400" height="250" loading="lazy">
+            </div>
+            <div class="card-subtitle">Writers' Room</div>
+            <h3 class="card-title">Table Reads & Punch-Up Circles</h3>
+            <p class="card-description">Students read sketches out loud, timing every beat and receiving direct director notes on punchline velocity.</p>
+          </div>
+
+          <div class="theatre-card dark-style">
+            <div class="card-image-wrap">
+              <img src="../assets/images/green-room-props.jpg" alt="Backstage green room with costume rack, vanity mirror, and improv performers warming up" width="400" height="250" loading="lazy">
+            </div>
+            <div class="card-subtitle">Green Room & Props</div>
+            <h3 class="card-title">Curtain Call Preparation</h3>
+            <p class="card-description">The energy before a live showcase. Students warm up their vocal resonators and run two-line scene openers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 4: CORPORATE & TEAM-BUILDING WORKSHOPS (Unique Revenue Stream)
+         ==================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="corporate-banner">
+          <div>
+            <span class="section-tag gold">Executive & Team Dynamics</span>
+            <h2 style="font-size: clamp(2rem, 3.5vw, 2.75rem); color: var(--marquee-cream); margin: 12px 0;">Corporate Improv & Innovation Labs</h2>
+            <p style="color: var(--marquee-cream-muted); font-size: 1.05rem; line-height: 1.7; margin-bottom: 24px;">
+              The exact same "Yes, And" techniques that make comedy ensembles cohesive can transform your corporate culture. We’ve trained Fortune 500 leadership, product teams, and high-growth startups to communicate with radical clarity, foster fearless psychological safety, and dismantle silo mentality.
+            </p>
+            <div class="corporate-cta-buttons" style="display: flex; gap: 14px; flex-wrap: wrap;">
+              <a href="contact.html" class="btn btn-gold">Request Corporate Pitch Deck</a>
+              <a href="about.html" class="btn btn-outline">Our Enterprise Clients</a>
+            </div>
+          </div>
+          <div style="display: flex; justify-content: center;">
+            <div class="theatre-card dark-style" style="border: 2px solid var(--spotlight-gold); width: 100%;">
+              <div class="card-icon-wrap gold">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <h3 class="card-title">What We Deliver</h3>
+              <ul style="text-align: center; color: var(--marquee-cream-muted); font-size: 0.95rem; margin: 16px 0; display: flex; flex-direction: column; gap: 8px;">
+                <li>✓ Half-Day & Full-Day On-Site Offsites</li>
+                <li>✓ Public Speaking & Pitch Presence Coaching</li>
+                <li>✓ Rapid Creative Ideation & Prototyping</li>
+                <li>✓ Interactive Evening Showcase for Your Staff</li>
+              </ul>
+              <div class="card-footer">
+                <a href="contact.html" class="btn btn-sm btn-primary">Book an Executive Consultation</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 5: HOW TO JOIN — STEP PROCESS (Numbered Step Visual)
+         ==================================================================== -->
+    <section class="section section-dark" id="how-to-join">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag gold">Simple 3-Step Journey</span>
+          <h2>How To Take The Stage</h2>
+          <div class="marquee-divider">
+            <span class="line"></span>
+            <span class="bulb"></span>
+            <span class="bulb"></span>
+            <span class="bulb"></span>
+            <span class="line"></span>
+          </div>
+          <p>No terrifying auditions required for Level 1. Anyone with curiosity and enthusiasm can begin.</p>
+        </div>
+
+        <div class="steps-grid">
+          <!-- Step 1 -->
+          <div class="step-card">
+            <div class="step-number-badge">1</div>
+            <div class="card-subtitle">Choose Your Track</div>
+            <h3 class="card-title">Enroll in Level 1</h3>
+            <p class="card-description">
+              Select a weekday evening (Tue/Thu) or Saturday morning cohort. Zero experience required. Secure your spot in less than 2 minutes via our student portal.
+            </p>
+            <div class="card-footer">
+              <a href="classes.html" class="btn btn-sm btn-gold">View Class Times</a>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-card">
+            <div class="step-number-badge">2</div>
+            <div class="card-subtitle">8 Studio Sessions</div>
+            <h3 class="card-title">Attend Weekly Labs</h3>
+            <p class="card-description">
+              Meet your 12-person ensemble each week for 2.5 hours of exhilarating stage exercises, expert directorial side-coaching, and non-stop laughter.
+            </p>
+            <div class="card-footer">
+              <a href="about.html" class="btn btn-sm btn-gold">Read Studio Guidelines</a>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-card">
+            <div class="step-number-badge">3</div>
+            <div class="card-subtitle">The Culmination</div>
+            <h3 class="card-title">Debut Under Spotlight</h3>
+            <p class="card-description">
+              Step onto our mainstage for your official graduation show! Perform live in front of friends, family, and cheering comedy lovers.
+            </p>
+            <div class="card-footer">
+              <a href="shows.html" class="btn btn-sm btn-gold">Browse Showcase Calendar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 6: GET STARTED CTA (Bold Distinct Closing Block)
+         ==================================================================== -->
+    <section class="section" style="background: linear-gradient(135deg, var(--stage-violet) 0%, var(--ink-black) 100%); color: var(--marquee-cream); text-align: center;">
+      <div class="container" style="max-width: 840px;">
+        <span class="section-tag gold">Next Term Begins Next Week</span>
+        <h2 style="font-size: clamp(2.4rem, 5vw, 3.8rem); line-height: 1.15; margin: 16px 0;">
+          THE STAGE IS WAITING.<br><span style="color: var(--spotlight-gold);">WHAT WILL YOUR FIRST LINE BE?</span>
+        </h2>
+        <p style="font-size: 1.15rem; color: var(--marquee-cream-muted); margin-bottom: 32px; line-height: 1.7;">
+          Classes fill quickly. With cohorts capped strictly at 12 students to guarantee massive stage time, registration closes this Sunday at midnight.
+        </p>
+        <div class="hero-cta-group" style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <a href="classes.html" class="btn btn-lg btn-primary">Enroll in Next Term ($295)</a>
+          <a href="contact.html" class="btn btn-lg btn-outline">Ask an Admissions Advisor</a>
+        </div>
+        <div style="margin-top: 24px; font-size: 0.85rem; color: var(--spotlight-gold);">
+          ★ 100% Satisfaction Guarantee: If your first class doesn't delight you, receive a full refund.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="site-logo footer-logo" aria-label="The Setup Comedy School Home" style="margin-bottom: 16px; display: inline-flex;">
+            <div class="logo-badge">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8a4 4 0 0 1 4-4h1a4 4 0 0 1 4 4v3a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5V8z"/><circle cx="6" cy="9" r="1" fill="currentColor"/><circle cx="9" cy="9" r="1" fill="currentColor"/><path d="M5.5 12.5a2.5 2.5 0 0 0 4 0"/><path d="M12 6.5a3.5 3.5 0 0 1 3.5-3.5h1A3.5 3.5 0 0 1 20 6.5v3a4.5 4.5 0 0 1-4.5 4.5"/><circle cx="15.2" cy="8.2" r="0.8" fill="currentColor"/><circle cx="18.2" cy="8.2" r="0.8" fill="currentColor"/><path d="M15.2 12a2 2 0 0 1 3 0"/></svg>
+            </div>
+            <div class="logo-text">
+              <span class="logo-title">THE SETUP</span>
+              <span class="logo-sub">Conservatory & Comedy Lab</span>
+            </div>
+          </a>
+          <p style="font-size: 0.92rem; line-height: 1.6; margin-bottom: 16px;">
+            The premier theater and training conservatory for improvisers, sketch writers, and performers. Founded in 2018 in the historic theater district.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://facebook.com" class="social-icon-btn" aria-label="The Setup Facebook" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://x.com" class="social-icon-btn" aria-label="The Setup X (Twitter)" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>
+            </a>
+            <a href="https://instagram.com" class="social-icon-btn" aria-label="The Setup Instagram" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://youtube.com" class="social-icon-btn" aria-label="The Setup YouTube" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+            </a>
+            <a href="https://tiktok.com" class="social-icon-btn" aria-label="The Setup TikTok" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home 1 (Mainstage)</a></li>
+            <li><a href="home-2.html">Explore More (Home 2)</a></li>
+            <li><a href="classes.html">Classes & Tracks</a></li>
+            <li><a href="shows.html">Shows & Tickets</a></li>
+            <li><a href="instructors.html">Faculty Directory</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">The School</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html">About The Setup</a></li>
+            <li><a href="contact.html">Box Office & Studio</a></li>
+            <li><a href="dashboard.html">Student LMS Portal</a></li>
+            <li><a href="coming-soon.html">Underground Stage</a></li>
+            <li><a href="404.html">404 Scene Not Found</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Box Office & Studio</h4>
+          <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 8px;">
+            412 Marquee Boulevard<br>
+            Theater District, NY 10019<br>
+            <strong>Phone:</strong> (212) 555-0199<br>
+            <strong>Hours:</strong> Tue–Sun, 2:00 PM – 11:00 PM
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 The Setup Improv & Sketch Comedy Training School. All rights reserved.</div>
+        <div style="display: flex; gap: 16px;">
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Service</a>
+          <a href="contact.html">Code of Conduct</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/tilt-cards.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

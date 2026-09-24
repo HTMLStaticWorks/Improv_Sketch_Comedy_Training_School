@@ -1,0 +1,343 @@
+/* ==========================================================================
+   THE SETUP - IMPROV & SKETCH COMEDY TRAINING SCHOOL
+   Dark Mode Stylesheet (Ink Black & Theatrical Stage Glow)
+   ========================================================================== */
+
+/* Dark Mode Tokens triggered via class, data-theme or system preference */
+:root[data-theme="dark"],
+body.dark-mode {
+  --bg-primary: #121212;
+  --bg-secondary: #181818;
+  --bg-surface: #202020;
+  --bg-card: #222222;
+  --bg-dark-section: #0a0812;
+
+  --text-primary: #FFF8ED;
+  --text-secondary: #dcd3c3;
+  --text-muted: #a69c8e;
+  --text-inverse: #121212;
+
+  --border-light: rgba(255, 248, 237, 0.14);
+  --border-card: rgba(245, 183, 0, 0.35);
+
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 16px 50px rgba(0, 0, 0, 0.8);
+}
+
+/* --------------------------------------------------------------------------
+   1. Section Background Differentiation & Layering in Dark Mode
+   -------------------------------------------------------------------------- */
+body.dark-mode {
+  background-color: #121212;
+  color: #FFF8ED;
+}
+
+body.dark-mode .section {
+  background-color: #161616;
+  color: #FFF8ED;
+}
+
+body.dark-mode .section:nth-of-type(even) {
+  background-color: #1c1c1c;
+}
+
+body.dark-mode .section-dark {
+  background: linear-gradient(180deg, #1c122b 0%, #0d0816 100%) !important;
+  color: #FFF8ED !important;
+  border-top: 1px solid rgba(245, 183, 0, 0.18);
+  border-bottom: 1px solid rgba(245, 183, 0, 0.18);
+}
+
+body.dark-mode .section-violet {
+  background: radial-gradient(circle at 50% 30%, #351a5c 0%, #150928 100%) !important;
+  color: #FFF8ED !important;
+}
+
+body.dark-mode .page-hero::before {
+  background: 
+    radial-gradient(ellipse at 50% 20%, rgba(245, 183, 0, 0.15) 0%, transparent 65%),
+    linear-gradient(180deg, 
+      rgba(13, 8, 22, 0.85) 0%, 
+      rgba(28, 18, 43, 0.80) 45%, 
+      rgba(13, 8, 22, 0.96) 85%,
+      #0d0816 100%
+    ) !important;
+}
+
+body.dark-mode .hero-pill {
+  background: rgba(13, 8, 22, 0.88) !important;
+  border-color: rgba(245, 183, 0, 0.45) !important;
+  color: #FFF8ED !important;
+}
+
+/* --------------------------------------------------------------------------
+   2. Typography & Text Visibility Overrides for Dark Mode
+   -------------------------------------------------------------------------- */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode .card-title,
+body.dark-mode .section-title,
+body.dark-mode .section-header h2,
+body.dark-mode .form-label,
+body.dark-mode .footer-title {
+  color: #FFF8ED !important;
+}
+
+body.dark-mode p,
+body.dark-mode .section-header p,
+body.dark-mode .card-description,
+body.dark-mode .step-description,
+body.dark-mode .testimonial-role,
+body.dark-mode .faq-answer,
+body.dark-mode .caveat-quote,
+body.dark-mode .footer-links-list a {
+  color: #dcd3c3 !important;
+}
+
+body.dark-mode .card-subtitle {
+  color: var(--spotlight-gold) !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. Component & Card Overrides in Dark Mode
+   -------------------------------------------------------------------------- */
+body.dark-mode .theatre-card,
+body.dark-mode .theatre-card.dark-style,
+body.dark-mode .form-card,
+body.dark-mode .step-card,
+body.dark-mode .testimonial-card,
+body.dark-mode .faq-item,
+body.dark-mode .path-content-panel,
+body.dark-mode .corporate-banner {
+  background: #202020 !important;
+  border-color: rgba(245, 183, 0, 0.3) !important;
+  color: #FFF8ED !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6) !important;
+}
+
+body.dark-mode .theatre-card:hover {
+  border-color: var(--spotlight-gold) !important;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 25px rgba(245, 183, 0, 0.3) !important;
+}
+
+body.dark-mode .section-tag {
+  background: rgba(196, 30, 58, 0.25);
+  border-color: var(--curtain-crimson);
+  color: #ff4d6d;
+}
+
+body.dark-mode .section-tag.gold {
+  background: rgba(245, 183, 0, 0.2);
+  border-color: var(--spotlight-gold);
+  color: var(--spotlight-gold);
+}
+
+/* --------------------------------------------------------------------------
+   4. Form Controls & Inputs in Dark Mode
+   -------------------------------------------------------------------------- */
+body.dark-mode .form-control {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.2) !important;
+  color: #FFF8ED !important;
+}
+
+body.dark-mode .form-control::placeholder {
+  color: rgba(255, 248, 237, 0.55);
+}
+
+body.dark-mode .form-control:focus {
+  border-color: var(--spotlight-gold) !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 0 12px rgba(245, 183, 0, 0.4) !important;
+}
+
+/* --------------------------------------------------------------------------
+   5. Tables & Accordions in Dark Mode
+   -------------------------------------------------------------------------- */
+body.dark-mode .theatre-table {
+  background: #202020 !important;
+  color: #FFF8ED !important;
+}
+
+body.dark-mode .theatre-table th {
+  background: var(--curtain-crimson) !important;
+  color: var(--marquee-cream) !important;
+}
+
+body.dark-mode .theatre-table td {
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+  color: #FFF8ED !important;
+}
+
+body.dark-mode .theatre-table tr:hover {
+  background: rgba(245, 183, 0, 0.08) !important;
+}
+
+body.dark-mode .faq-question {
+  color: #FFF8ED !important;
+  background: transparent !important;
+}
+
+/* --------------------------------------------------------------------------
+/* --------------------------------------------------------------------------
+   6. Header Navigation & Footer in Dark Mode Overrides
+   -------------------------------------------------------------------------- */
+body.dark-mode .site-header {
+  background: rgba(10, 10, 10, 0.96) !important;
+  border-bottom-color: var(--spotlight-gold) !important;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6) !important;
+}
+
+body.dark-mode .site-logo {
+  color: var(--marquee-cream) !important;
+}
+
+body.dark-mode .site-header .logo-title {
+  color: var(--marquee-cream) !important;
+}
+
+body.dark-mode .site-header .logo-sub {
+  color: var(--spotlight-gold) !important;
+}
+
+body.dark-mode .nav-link {
+  color: var(--marquee-cream-muted) !important;
+}
+
+body.dark-mode .nav-link:hover,
+body.dark-mode .nav-link.active {
+  color: var(--spotlight-gold) !important;
+}
+
+body.dark-mode .nav-link.active::after {
+  background: var(--spotlight-gold) !important;
+  box-shadow: 0 0 8px var(--spotlight-gold) !important;
+}
+
+body.dark-mode .utility-btn {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(245, 183, 0, 0.3) !important;
+  color: var(--spotlight-gold) !important;
+}
+
+body.dark-mode .utility-btn:hover {
+  background: rgba(245, 183, 0, 0.2) !important;
+  border-color: var(--spotlight-gold) !important;
+  color: var(--spotlight-gold-light) !important;
+}
+
+body.dark-mode .btn-login {
+  color: var(--spotlight-gold) !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1.5px solid var(--spotlight-gold) !important;
+}
+
+body.dark-mode .btn-login:hover {
+  background: var(--spotlight-gold) !important;
+  color: var(--ink-black) !important;
+  border-color: var(--spotlight-gold) !important;
+  box-shadow: 0 0 14px rgba(245, 183, 0, 0.4) !important;
+}
+
+body.dark-mode .btn-dashboard {
+  background: linear-gradient(135deg, var(--spotlight-gold) 0%, #ffc41e 100%) !important;
+  color: var(--ink-black) !important;
+  border: 2px solid #FFF8ED !important;
+  font-weight: 700 !important;
+  box-shadow: 0 0 18px rgba(245, 183, 0, 0.5) !important;
+}
+
+body.dark-mode .btn-dashboard:hover {
+  background: linear-gradient(135deg, #ffc41e 0%, var(--spotlight-gold) 100%) !important;
+  color: var(--ink-black) !important;
+  box-shadow: 0 0 25px rgba(245, 183, 0, 0.75) !important;
+  transform: translateY(-2px) !important;
+}
+
+body.dark-mode .menu-toggle {
+  border-color: rgba(245, 183, 0, 0.3) !important;
+}
+
+body.dark-mode .menu-toggle span {
+  background-color: var(--spotlight-gold) !important;
+}
+
+body.dark-mode .site-header.menu-active {
+  background: #0a0a0a !important;
+  border-bottom-color: var(--spotlight-gold) !important;
+}
+
+body.dark-mode .site-nav.mobile-open {
+  background: linear-gradient(180deg, #140d21 0%, #08050e 100%) !important;
+  border-top-color: var(--spotlight-gold) !important;
+  color: #FFF8ED !important;
+}
+
+body.dark-mode .btn-outline {
+  color: #FFF8ED !important;
+  border-color: rgba(255, 248, 237, 0.4) !important;
+}
+
+body.dark-mode .btn-outline:hover {
+  background: var(--spotlight-gold) !important;
+  color: #121212 !important;
+  border-color: var(--spotlight-gold) !important;
+}
+
+/* Footer Dark Mode Overrides */
+body.dark-mode .site-footer {
+  background: #0a0a0a !important;
+  color: var(--marquee-cream-muted) !important;
+  border-top: 3px solid var(--spotlight-gold) !important;
+}
+
+body.dark-mode .site-footer .logo-title,
+body.dark-mode .footer-title {
+  color: var(--marquee-cream) !important;
+}
+
+body.dark-mode .student-author {
+  color: var(--spotlight-gold) !important;
+}
+
+body.dark-mode .student-meta {
+  color: var(--marquee-cream-muted) !important;
+}
+
+body.dark-mode .footer-links-list a {
+  color: var(--marquee-cream-muted) !important;
+}
+
+body.dark-mode .footer-links-list a:hover {
+  color: var(--spotlight-gold) !important;
+}
+
+body.dark-mode .social-icon-btn {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(245, 183, 0, 0.3) !important;
+  color: var(--spotlight-gold) !important;
+}
+
+body.dark-mode .social-icon-btn:hover {
+  background: var(--spotlight-gold) !important;
+  color: var(--ink-black) !important;
+  box-shadow: 0 0 12px var(--spotlight-gold-glow) !important;
+}
+
+body.dark-mode .footer-bottom {
+  border-top-color: rgba(255, 255, 255, 0.1) !important;
+  color: var(--marquee-cream-muted) !important;
+}
+
+body.dark-mode .footer-bottom a {
+  color: var(--marquee-cream-muted) !important;
+}
+
+body.dark-mode .footer-bottom a:hover {
+  color: var(--spotlight-gold) !important;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scene Not Found (404) — The Setup Comedy School</title>
+  <meta name="description" content="Scene Not Found! Someone forgot the script or called blackout too early. Let's find your way back to the stage at The Setup.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css" id="rtl-stylesheet" disabled>
+</head>
+<body class="dark-mode" style="min-height: 100vh; display: flex; flex-direction: column;">
+  <!-- WCAG Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Marquee Navigation -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="site-logo" aria-label="The Setup Comedy School Home">
+        <div class="logo-badge">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8a4 4 0 0 1 4-4h1a4 4 0 0 1 4 4v3a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5V8z"/><circle cx="6" cy="9" r="1" fill="currentColor"/><circle cx="9" cy="9" r="1" fill="currentColor"/><path d="M5.5 12.5a2.5 2.5 0 0 0 4 0"/><path d="M12 6.5a3.5 3.5 0 0 1 3.5-3.5h1A3.5 3.5 0 0 1 20 6.5v3a4.5 4.5 0 0 1-4.5 4.5"/><circle cx="15.2" cy="8.2" r="0.8" fill="currentColor"/><circle cx="18.2" cy="8.2" r="0.8" fill="currentColor"/><path d="M15.2 12a2 2 0 0 1 3 0"/></svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">THE SETUP</span>
+          <span class="logo-sub">Stage 404</span>
+        </div>
+      </a>
+
+      <!-- 4-5 Core Nav Items -->
+      <nav class="site-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home 1</a></li>
+          <li><a href="home-2.html" class="nav-link">Home 2</a></li>
+          <li><a href="classes.html" class="nav-link">Classes</a></li>
+          <li><a href="shows.html" class="nav-link">Shows</a></li>
+          <li><a href="instructors.html" class="nav-link">Instructors</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="header-actions">
+          <button class="utility-btn theme-toggle-btn" aria-label="Toggle Dark/Light Mode">
+            <span class="theme-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </span>
+          </button>
+          <button class="utility-btn rtl-toggle-btn" aria-label="Toggle RTL layout">
+            <span style="font-weight: 700; font-size: 0.8rem;">RTL</span>
+          </button>
+
+          <a href="login.html" class="btn btn-sm btn-login nav-login-btn">Login</a>
+          <a href="dashboard.html" class="btn btn-sm btn-dashboard nav-dashboard-btn">Dashboard</a>
+        </div>
+      </nav>
+
+      <button class="menu-toggle" aria-label="Toggle Mobile Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content" style="flex: 1; display: flex; align-items: center; justify-content: center; position: relative; padding: var(--sp-8) var(--sp-3); text-align: center; background: radial-gradient(circle at center, #301948 0%, #121212 90%); overflow: hidden;">
+    <!-- 3D Canvas Background -->
+    <div class="stage-canvas-container" aria-hidden="true">
+      <canvas class="stage-canvas"></canvas>
+    </div>
+
+    <div class="curtain-drape-left" aria-hidden="true"></div>
+    <div class="curtain-drape-right" aria-hidden="true"></div>
+
+    <div class="container" style="max-width: 680px; position: relative; z-index: 10;">
+      <div class="theatre-card dark-style" style="border: 2px solid var(--curtain-crimson); padding: var(--sp-6); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);">
+        <div class="card-icon-wrap" style="width: 84px; height: 84px; border-color: var(--spotlight-gold); background: rgba(245, 183, 0, 0.15); color: var(--spotlight-gold); margin-bottom: 20px;">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 16s-1.5-2-4-2-4 2-4 2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+        </div>
+
+        <span class="section-tag" style="background: rgba(196, 30, 58, 0.25);">ERROR 404 • UNREHEARSED SCENE</span>
+        <h1 style="font-size: clamp(2.2rem, 5vw, 3.4rem); margin: 16px 0; color: #fff;">SCENE NOT FOUND!</h1>
+        <p class="caveat-quote" style="color: var(--spotlight-gold); margin-bottom: 16px;">
+          "Whoever was on stage lights just called a premature blackout!"
+        </p>
+        <p class="card-description" style="font-size: 1.05rem; margin-bottom: 28px; line-height: 1.7;">
+          The page or comedic premise you were searching for wandered into the wrong dressing room. Luckily in improv, there are no mistakes — only opportunities to edit and wipe the stage.
+        </p>
+
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <a href="index.html" class="btn btn-gold">Back to Mainstage (Home)</a>
+          <a href="classes.html" class="btn btn-outline">Explore Classes</a>
+          <a href="shows.html" class="btn btn-primary">Watch a Show</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding: 0;">
+        <div>&copy; 2026 The Setup Improv & Sketch Comedy Training School.</div>
+        <div><a href="index.html">The Setup Home</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/tilt-cards.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

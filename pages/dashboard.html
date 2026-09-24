@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student LMS Dashboard — The Setup Comedy School</title>
+  <meta name="description" content="Access your improv and sketch comedy student portal. Track course progression, browse upcoming terms, RSVP for showcases, and manage tuition billing.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css" id="rtl-stylesheet" disabled>
+</head>
+<body class="dark-mode">
+  <!-- WCAG Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Marquee Navigation -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="site-logo" aria-label="The Setup Comedy School Home">
+        <div class="logo-badge">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8a4 4 0 0 1 4-4h1a4 4 0 0 1 4 4v3a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5V8z"/><circle cx="6" cy="9" r="1" fill="currentColor"/><circle cx="9" cy="9" r="1" fill="currentColor"/><path d="M5.5 12.5a2.5 2.5 0 0 0 4 0"/><path d="M12 6.5a3.5 3.5 0 0 1 3.5-3.5h1A3.5 3.5 0 0 1 20 6.5v3a4.5 4.5 0 0 1-4.5 4.5"/><circle cx="15.2" cy="8.2" r="0.8" fill="currentColor"/><circle cx="18.2" cy="8.2" r="0.8" fill="currentColor"/><path d="M15.2 12a2 2 0 0 1 3 0"/></svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">THE SETUP</span>
+          <span class="logo-sub">Student LMS Portal</span>
+        </div>
+      </a>
+
+      <!-- Utility Toggles -->
+      <div class="header-actions">
+        <button class="utility-btn theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Dark/Light Mode">
+          <span class="theme-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </span>
+        </button>
+        <button class="utility-btn rtl-toggle-btn" aria-label="Toggle RTL layout" title="Toggle RTL layout">
+          <span style="font-weight: 700; font-size: 0.8rem;">RTL</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="dashboard-wrapper">
+    <div class="container">
+      <!-- Student Profile Header Card -->
+      <div class="dashboard-header-card">
+        <div class="student-info-row">
+          <img src="../assets/images/student-avatar.webp" alt="Alex Rivera Student Avatar" class="student-avatar-img">
+          <div>
+            <span class="section-tag gold" style="font-size: 0.72rem; padding: 3px 12px; margin-bottom: 4px;">Student ID: STU-2026-8841</span>
+            <h1 style="font-size: clamp(1.6rem, 3vw, 2.2rem); margin: 4px 0; color: #fff;">ALEX RIVERA</h1>
+            <p style="color: var(--marquee-cream-muted); font-size: 0.95rem;">
+              Enrolled in: <strong style="color: var(--spotlight-gold);">Level 2: Intermediate Scene Work & Emotion</strong> (Instructor: Sarah Jenkins)
+            </p>
+          </div>
+        </div>
+
+        <div class="dash-header-actions">
+          <button class="btn btn-sm btn-gold" onclick="document.querySelector('[data-tab=\'tab-showcase\']').click();">
+            RSVP for Showcase
+          </button>
+          <button class="btn btn-sm btn-outline" onclick="document.querySelector('[data-tab=\'tab-catalog\']').click();">
+            Browse Classes
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Stats Shimmer/Loaded Overview Cards -->
+      <div id="dashStatsContainer" class="card-grid grid-4" style="margin-bottom: var(--sp-5);">
+        <!-- Skeletons render here first, then real data injected by dashboard.js -->
+        <div class="theatre-card"><div class="skeleton skeleton-box"></div><div class="skeleton skeleton-text"></div></div>
+        <div class="theatre-card"><div class="skeleton skeleton-box"></div><div class="skeleton skeleton-text"></div></div>
+        <div class="theatre-card"><div class="skeleton skeleton-box"></div><div class="skeleton skeleton-text"></div></div>
+        <div class="theatre-card"><div class="skeleton skeleton-box"></div><div class="skeleton skeleton-text"></div></div>
+      </div>
+
+      <!-- Visual Course Progression Tracker -->
+      <div class="progress-track-wrapper">
+        <div class="progress-track-header">
+          <div class="progress-track-title-wrap">
+            <h3 class="progress-track-title">Conservatory Progression Milestone</h3>
+            <span class="progress-track-sub">Completion unlocks resident troupe audition eligibility</span>
+          </div>
+          <span class="progress-track-badge">Overall: 68%</span>
+        </div>
+        <div id="dashProgressionTrack">
+          <!-- Injected dynamically by dashboard.js -->
+          <div class="skeleton skeleton-box" style="height: 90px;"></div>
+        </div>
+      </div>
+
+      <!-- Dashboard Interactive Tab Navigation -->
+      <div class="dashboard-tabs-bar" role="tablist">
+        <button class="dash-tab-btn active" data-tab="tab-catalog" role="tab">1. Enroll in Classes</button>
+        <button class="dash-tab-btn" data-tab="tab-schedule" role="tab">2. Class Schedule & Call Times</button>
+        <button class="dash-tab-btn" data-tab="tab-showcase" role="tab">3. Showcase Registration</button>
+        <button class="dash-tab-btn" data-tab="tab-billing" role="tab">4. Payments & Billing</button>
+        <button class="dash-tab-btn" data-tab="tab-settings" role="tab">5. Student Settings</button>
+      </div>
+
+      <!-- Tab 1: Enroll In Class Levels -->
+      <div id="tab-catalog" class="dash-panel active">
+        <div style="margin-bottom: 20px;">
+          <h2 style="font-size: 1.6rem; color: #fff;">Available Cohorts & Advanced Masterclasses</h2>
+          <p style="color: var(--marquee-cream-muted); font-size: 0.95rem;">Select your next tier or register for weekend guest director intensives.</p>
+        </div>
+        <div id="dashCatalogContainer">
+          <div class="skeleton skeleton-box" style="height: 250px;"></div>
+        </div>
+      </div>
+
+      <!-- Tab 2: Class Schedule View -->
+      <div id="tab-schedule" class="dash-panel">
+        <div style="margin-bottom: 20px;">
+          <h2 style="font-size: 1.6rem; color: #fff;">Your Weekly Studio Schedule</h2>
+          <p style="color: var(--marquee-cream-muted); font-size: 0.95rem;">All sessions take place at 412 Marquee Blvd unless specified otherwise.</p>
+        </div>
+        <div id="dashScheduleContainer">
+          <div class="skeleton skeleton-box" style="height: 250px;"></div>
+        </div>
+      </div>
+
+      <!-- Tab 3: Showcase Registration -->
+      <div id="tab-showcase" class="dash-panel">
+        <div style="margin-bottom: 20px;">
+          <h2 style="font-size: 1.6rem; color: #fff;">Upcoming Student Performance Slots</h2>
+          <p style="color: var(--marquee-cream-muted); font-size: 0.95rem;">Claim your call-time slot for open jams and graduation showcases.</p>
+        </div>
+        <div id="dashShowcaseContainer">
+          <div class="skeleton skeleton-box" style="height: 250px;"></div>
+        </div>
+      </div>
+
+      <!-- Tab 4: Payments & Billing -->
+      <div id="tab-billing" class="dash-panel">
+        <div style="margin-bottom: 20px;">
+          <h2 style="font-size: 1.6rem; color: #fff;">Tuition Invoices & Payment Methods</h2>
+          <p style="color: var(--marquee-cream-muted); font-size: 0.95rem;">Managed via Stripe & PayPal placeholder integration.</p>
+        </div>
+        <div id="dashBillingContainer">
+          <div class="skeleton skeleton-box" style="height: 250px;"></div>
+        </div>
+      </div>
+
+      <!-- Tab 5: Profile & Troupe Bio Settings -->
+      <div id="tab-settings" class="dash-panel">
+        <div style="margin-bottom: 20px;">
+          <h2 style="font-size: 1.6rem; color: #fff;">Student Profile & Troupe Directory</h2>
+          <p style="color: var(--marquee-cream-muted); font-size: 0.95rem;">Update your showcase playbill bio and contact preferences.</p>
+        </div>
+        <div class="theatre-card dark-style" style="max-width: 680px; margin: 0 auto; text-align: left; align-items: stretch;">
+          <form onsubmit="event.preventDefault();">
+            <div class="form-group">
+              <label class="form-label" for="profName">Display Name for Playbills</label>
+              <input type="text" id="profName" class="form-control" value="Alex Rivera">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="profBio">Playbill Bio (Max 40 words)</label>
+              <textarea id="profBio" class="form-control" rows="3">Alex is an architect by day and an improviser by night. Passionate about grounded characters and finding truth in absurd situations.</textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="profEmail">Notification Email</label>
+              <input type="email" id="profEmail" class="form-control" value="alex.rivera@example.com">
+            </div>
+            <div style="text-align: center; margin-top: 16px;">
+              <button type="submit" class="btn btn-gold">Save Playbill Changes</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <!-- Scripts -->
+  <script src="../assets/js/tilt-cards.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>
