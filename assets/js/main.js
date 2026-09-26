@@ -29,12 +29,11 @@
   function updateNavAuthUI() {
     const loginBtns = document.querySelectorAll('.nav-login-btn');
     const dashboardBtns = document.querySelectorAll('.nav-dashboard-btn');
-    const loggedIn = isStudentLoggedIn();
+    const isInsidePages = window.location.pathname.includes('/pages/');
 
     loginBtns.forEach(btn => {
       btn.textContent = 'Login';
-      const isRootIndex = window.location.pathname.endsWith('index.html') && !window.location.pathname.includes('/pages/');
-      const targetHref = isRootIndex ? 'pages/login.html' : 'login.html';
+      const targetHref = isInsidePages ? 'login.html' : 'pages/login.html';
       btn.setAttribute('href', targetHref);
       btn.onclick = null;
     });
@@ -42,8 +41,7 @@
     dashboardBtns.forEach(btn => {
       btn.classList.remove('disabled');
       btn.removeAttribute('aria-disabled');
-      const isRootIndex = window.location.pathname.endsWith('index.html') && !window.location.pathname.includes('/pages/');
-      const targetHref = isRootIndex ? 'pages/dashboard.html' : 'dashboard.html';
+      const targetHref = isInsidePages ? 'dashboard.html' : 'pages/dashboard.html';
       btn.setAttribute('href', targetHref);
       btn.title = 'Student Dashboard';
       btn.onclick = null;
