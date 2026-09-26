@@ -1,5 +1,5 @@
 /**
- * THE SETUP - IMPROV & SKETCH COMEDY TRAINING SCHOOL
+ * THE SPOTLIGHT COMEDY ACADEMY
  * 3D Spotlight Tilt Cards Engine
  * Section 2 & Section 6 Implementation
  */

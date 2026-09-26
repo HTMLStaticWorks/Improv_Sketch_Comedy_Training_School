@@ -1,7 +1,7 @@
-# "The Setup" Improv & Sketch Comedy Training School — System Architecture
+# "The Spotlight Comedy Academy" — System Architecture
 
 ## 1. Project Overview
-"The Setup" is a premier multi-page theatrical website and LMS educational platform designed for an improv and sketch comedy conservatory. It incorporates:
+"The Spotlight Comedy Academy" is a premier multi-page theatrical website and LMS educational platform designed for an improv and sketch comedy conservatory. It incorporates:
 - **Design Concept**: "Comedy Marquee" — theatrical crimson velvet, warm spotlight gold, and ink black stage tones.
 - **Architecture**: LMS core (Student Dashboard, class enrollment, progression milestones, billing, schedule) layered with showcase booking and troupe highlights.
 - **Motion & 3D**: Mouse-tracking 3D tilt cards with dynamic cursor-following spotlight glow, and 3D stage canvas with sweeping spotlight beams and ambient dust motes.

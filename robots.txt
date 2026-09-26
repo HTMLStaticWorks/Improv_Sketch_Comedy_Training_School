@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://thesetupcomedy.example.com/sitemap.xml
+Sitemap: https://thespotlightcomedy.example.com/sitemap.xml

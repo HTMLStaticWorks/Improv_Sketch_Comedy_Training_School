@@ -1,5 +1,5 @@
 /**
- * THE SETUP - IMPROV & SKETCH COMEDY TRAINING SCHOOL
+ * THE SPOTLIGHT COMEDY ACADEMY
  * Student LMS Dashboard Interactive Engine
  * Section 5.9 Implementation
  */
@@ -369,19 +369,34 @@
     const billingContainer = document.getElementById('dashBillingContainer');
     if (billingContainer) {
       billingContainer.innerHTML = `
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px;">
-          <div class="theatre-card dark-style">
-            <h3 class="card-title" style="font-size: 1.2rem;">Payment Method</h3>
-            <p class="card-description">Visa ending in •••• 4242 (Expires 08/28)</p>
-            <div class="card-footer" style="flex-direction: row; gap: 12px;">
+        <div class="dash-billing-cards">
+          <div class="theatre-card dark-style dash-billing-card">
+            <div class="billing-card-header">
+              <div class="billing-icon-badge">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+              </div>
+              <div class="billing-card-info">
+                <h3 class="card-title" style="font-size: 1.15rem; margin-bottom: 4px; color: #FFF8ED;">Payment Method</h3>
+                <p class="card-description" style="margin-bottom: 0;">Visa ending in •••• 4242 (Expires 08/28)</p>
+              </div>
+            </div>
+            <div class="billing-card-actions">
               <button class="btn btn-sm btn-outline-gold">Update Card</button>
               <button class="btn btn-sm btn-outline">Add PayPal</button>
             </div>
           </div>
-          <div class="theatre-card dark-style">
-            <h3 class="card-title" style="font-size: 1.2rem;">Tuition Assistance</h3>
-            <p class="card-description">Need work-study or installment plans?</p>
-            <div class="card-footer">
+
+          <div class="theatre-card dark-style dash-billing-card">
+            <div class="billing-card-header">
+              <div class="billing-icon-badge gold">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <div class="billing-card-info">
+                <h3 class="card-title" style="font-size: 1.15rem; margin-bottom: 4px; color: #FFF8ED;">Tuition Assistance</h3>
+                <p class="card-description" style="margin-bottom: 0;">Need work-study or installment plans?</p>
+              </div>
+            </div>
+            <div class="billing-card-actions">
               <a href="contact.html" class="btn btn-sm btn-primary">Apply for Work-Study</a>
             </div>
           </div>

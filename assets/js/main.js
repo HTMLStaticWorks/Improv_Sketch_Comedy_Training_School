@@ -1,5 +1,5 @@
 /**
- * THE SETUP - IMPROV & SKETCH COMEDY TRAINING SCHOOL
+ * THE SPOTLIGHT COMEDY ACADEMY
  * Main Interactive Engine: Stage Lighting, Navigation, Theming & Validation
  */
 

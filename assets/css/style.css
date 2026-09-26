@@ -1,5 +1,5 @@
 /* ==========================================================================
-   THE SETUP - IMPROV & SKETCH COMEDY TRAINING SCHOOL
+   THE SPOTLIGHT COMEDY ACADEMY
    Primary Design System & Core Stylesheet
    ========================================================================== */
 
@@ -510,19 +510,35 @@ body.menu-open {
 }
 
 /* Outline Button - Context Aware */
-.btn-outline:not(:hover):not(:focus):not(:active) {
+.btn-outline {
   background: transparent;
-  color: var(--text-primary) !important;
+  color: var(--text-primary);
   border-color: rgba(18, 18, 18, 0.35);
 }
 
+.btn-outline:not(:hover):not(:focus):not(:active) {
+  background: transparent;
+  color: var(--text-primary);
+  border-color: rgba(18, 18, 18, 0.35);
+}
+
+.section-dark .btn-outline,
 .section-dark .btn-outline:not(:hover):not(:focus):not(:active),
+.section-violet .btn-outline,
 .section-violet .btn-outline:not(:hover):not(:focus):not(:active),
+.page-hero .btn-outline,
 .page-hero .btn-outline:not(:hover):not(:focus):not(:active),
+.hero-home1 .btn-outline,
+.hero-home1 .btn-outline:not(:hover):not(:focus):not(:active),
+.hero-home2 .btn-outline,
+.hero-home2 .btn-outline:not(:hover):not(:focus):not(:active),
+.site-footer .btn-outline,
 .site-footer .btn-outline:not(:hover):not(:focus):not(:active),
+.theatre-card.dark-style .btn-outline,
 .theatre-card.dark-style .btn-outline:not(:hover):not(:focus):not(:active) {
-  color: var(--marquee-cream) !important;
-  border-color: rgba(255, 248, 237, 0.5);
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.6) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
 }
 
 .btn-outline:hover,
@@ -531,6 +547,8 @@ body.menu-open {
 .section-dark .btn-outline:hover,
 .section-violet .btn-outline:hover,
 .page-hero .btn-outline:hover,
+.hero-home1 .btn-outline:hover,
+.hero-home2 .btn-outline:hover,
 .site-footer .btn-outline:hover,
 .theatre-card.dark-style .btn-outline:hover {
   background: var(--spotlight-gold) !important;
@@ -898,13 +916,23 @@ body.dark-mode .card-subtitle {
 
 /* Auth / Standalone Pages Top Actions Bar */
 .auth-top-actions {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 100;
-  display: flex;
-  gap: 10px;
-  align-items: center;
+  position: absolute !important;
+  top: 18px !important;
+  right: 20px !important;
+  z-index: 1000 !important;
+  display: flex !important;
+  gap: 10px !important;
+  align-items: center !important;
+}
+
+.auth-main,
+main#main-content.auth-main,
+body > main#main-content.auth-main,
+body.dark-mode > main#main-content.auth-main,
+html[data-theme="dark"] body > main#main-content.auth-main {
+  padding-top: 80px !important;
+  padding-bottom: 40px !important;
+  box-sizing: border-box !important;
 }
 
 .card-footer {
@@ -1990,6 +2018,39 @@ body.dark-mode .card-subtitle {
   height: calc(100vh - 64px);
 }
 
+/* Sidebar Utility Controls (Theme & RTL inside Hamburger Drawer on Mobile) */
+.sidebar-utility-controls {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 0 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 14px;
+}
+
+.sidebar-utility-controls .utility-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1.5px solid rgba(245, 183, 0, 0.35);
+  color: var(--spotlight-gold);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sidebar-utility-controls .utility-btn:hover {
+  background: rgba(245, 183, 0, 0.2);
+  border-color: var(--spotlight-gold);
+  color: #FFF8ED;
+}
+
 .sidebar-nav {
   display: flex;
   flex-direction: column;
@@ -2197,6 +2258,110 @@ body.dark-mode .card-subtitle {
     white-space: normal;
     width: 100%;
     flex-shrink: 0;
+  }
+
+  /* Clean up Dashboard Topbar Header on Mobile: Keep Theme & RTL inside Hamburger Menu */
+  .app-topbar .topbar-right .theme-toggle-btn,
+  .app-topbar .topbar-right .rtl-toggle-btn {
+    display: none !important;
+  }
+
+  .sidebar-utility-controls {
+    display: flex !important;
+  }
+
+  .app-topbar {
+    padding: 0 12px !important;
+  }
+
+  .topbar-left {
+    gap: 8px !important;
+  }
+
+  .topbar-logo {
+    gap: 8px !important;
+  }
+
+  .topbar-logo .logo-title {
+    font-size: 1.05rem !important;
+  }
+
+  .topbar-logo .logo-sub {
+    font-size: 0.62rem !important;
+  }
+}
+
+/* Dashboard Billing & Payment Cards Responsive Layout */
+.dash-billing-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.dash-billing-card {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+  height: 100%;
+}
+
+.billing-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.billing-icon-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF8ED;
+  flex-shrink: 0;
+}
+
+.billing-icon-badge.gold {
+  background: rgba(245, 183, 0, 0.12);
+  border-color: rgba(245, 183, 0, 0.4);
+  color: var(--spotlight-gold);
+}
+
+.billing-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  margin-top: auto;
+}
+
+.billing-card-actions .btn {
+  flex: 1 1 auto;
+  min-width: 120px;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .dash-billing-cards {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .billing-card-actions {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  .billing-card-actions .btn {
+    width: 100% !important;
   }
 }
 
@@ -2750,24 +2915,41 @@ body.dark-mode .card-subtitle {
     padding: 2px 4px !important;
   }
 
-  /* Prevent Auth Top Buttons from Touching Auth Card Box on Mobile */
+  /* Prevent Auth Top Buttons from Touching Auth Card Box on Mobile in Light & Dark Mode */
   .auth-top-actions {
     position: absolute !important;
     top: 14px !important;
     right: 14px !important;
     gap: 8px !important;
-    z-index: 100 !important;
+    z-index: 1000 !important;
+    display: flex !important;
+    align-items: center !important;
   }
 
-  body > main#main-content,
-  body.dark-mode > main#main-content,
-  main#main-content {
+  body > main#main-content:not(.auth-main),
+  body.dark-mode > main#main-content:not(.auth-main),
+  html[data-theme="dark"] body > main#main-content:not(.auth-main),
+  main#main-content:not(.auth-main) {
     padding-top: 0 !important;
     align-items: flex-start !important;
   }
 
-  main#main-content.auth-main {
-    padding-top: 24px !important;
+  body > main#main-content.auth-main,
+  body.dark-mode > main#main-content.auth-main,
+  html[data-theme="dark"] body > main#main-content.auth-main,
+  main#main-content.auth-main,
+  .auth-main {
+    padding-top: 80px !important;
+    padding-bottom: 40px !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    box-sizing: border-box !important;
+  }
+
+  .auth-container {
+    margin-top: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   /* Prevent Any Button Text Cropping Across Mobile Pages */
@@ -3938,44 +4120,92 @@ html:not([data-theme="dark"]) .page-hero .breadcrumb-item.active,
   color: #F5B700 !important;
 }
 
-/* Outline Buttons in All Heroes in Light Mode */
+/* Outline Buttons in All Heroes in Light Mode ("WHITE THEME") */
 .hero-home1 .btn-outline,
+.hero-home1 .btn-outline:not(:hover):not(:focus):not(:active),
 .hero-home2 .btn-outline,
+.hero-home2 .btn-outline:not(:hover):not(:focus):not(:active),
 .page-hero .btn-outline,
+.page-hero .btn-outline:not(:hover):not(:focus):not(:active),
+.hero-cta-group .btn-outline,
+.hero-cta-group .btn-outline:not(:hover):not(:focus):not(:active),
 html:not([data-theme="dark"]) .hero-home1 .btn-outline,
+html:not([data-theme="dark"]) .hero-home1 .btn-outline:not(:hover):not(:focus):not(:active),
 html:not([data-theme="dark"]) .hero-home2 .btn-outline,
+html:not([data-theme="dark"]) .hero-home2 .btn-outline:not(:hover):not(:focus):not(:active),
 html:not([data-theme="dark"]) .page-hero .btn-outline,
+html:not([data-theme="dark"]) .page-hero .btn-outline:not(:hover):not(:focus):not(:active),
+html:not([data-theme="dark"]) .hero-cta-group .btn-outline,
+html:not([data-theme="dark"]) .hero-cta-group .btn-outline:not(:hover):not(:focus):not(:active),
 :root[data-theme="light"] .hero-home1 .btn-outline,
+:root[data-theme="light"] .hero-home1 .btn-outline:not(:hover):not(:focus):not(:active),
 :root[data-theme="light"] .hero-home2 .btn-outline,
-:root[data-theme="light"] .page-hero .btn-outline {
+:root[data-theme="light"] .hero-home2 .btn-outline:not(:hover):not(:focus):not(:active),
+:root[data-theme="light"] .page-hero .btn-outline,
+:root[data-theme="light"] .page-hero .btn-outline:not(:hover):not(:focus):not(:active),
+:root[data-theme="light"] .hero-cta-group .btn-outline,
+:root[data-theme="light"] .hero-cta-group .btn-outline:not(:hover):not(:focus):not(:active),
+body:not(.dark-mode) .hero-home1 .btn-outline,
+body:not(.dark-mode) .hero-home1 .btn-outline:not(:hover):not(:focus):not(:active),
+body:not(.dark-mode) .hero-home2 .btn-outline,
+body:not(.dark-mode) .hero-home2 .btn-outline:not(:hover):not(:focus):not(:active),
+body:not(.dark-mode) .page-hero .btn-outline,
+body:not(.dark-mode) .page-hero .btn-outline:not(:hover):not(:focus):not(:active),
+body:not(.dark-mode) .hero-cta-group .btn-outline,
+body:not(.dark-mode) .hero-cta-group .btn-outline:not(:hover):not(:focus):not(:active) {
   color: #ffffff !important;
-  border-color: rgba(255, 255, 255, 0.35) !important;
-  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.6) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
 }
 
 .hero-home1 .btn-outline:hover,
 .hero-home2 .btn-outline:hover,
 .page-hero .btn-outline:hover,
+.hero-cta-group .btn-outline:hover,
 html:not([data-theme="dark"]) .hero-home1 .btn-outline:hover,
 html:not([data-theme="dark"]) .hero-home2 .btn-outline:hover,
 html:not([data-theme="dark"]) .page-hero .btn-outline:hover,
+html:not([data-theme="dark"]) .hero-cta-group .btn-outline:hover,
 :root[data-theme="light"] .hero-home1 .btn-outline:hover,
 :root[data-theme="light"] .hero-home2 .btn-outline:hover,
-:root[data-theme="light"] .page-hero .btn-outline:hover {
-  color: #F5B700 !important;
+:root[data-theme="light"] .page-hero .btn-outline:hover,
+:root[data-theme="light"] .hero-cta-group .btn-outline:hover,
+body:not(.dark-mode) .hero-home1 .btn-outline:hover,
+body:not(.dark-mode) .hero-home2 .btn-outline:hover,
+body:not(.dark-mode) .page-hero .btn-outline:hover,
+body:not(.dark-mode) .hero-cta-group .btn-outline:hover {
+  color: #121212 !important;
   border-color: #F5B700 !important;
-  background: rgba(245, 183, 0, 0.15) !important;
+  background: #F5B700 !important;
 }
 
 .hero-home2 .btn-outline-gold,
+.hero-home2 .btn-outline-gold:not(:hover):not(:focus):not(:active),
 .page-hero .btn-outline-gold,
+.page-hero .btn-outline-gold:not(:hover):not(:focus):not(:active),
+.hero-cta-group .btn-outline-gold,
+.hero-cta-group .btn-outline-gold:not(:hover):not(:focus):not(:active),
 html:not([data-theme="dark"]) .hero-home2 .btn-outline-gold,
+html:not([data-theme="dark"]) .hero-home2 .btn-outline-gold:not(:hover):not(:focus):not(:active),
 html:not([data-theme="dark"]) .page-hero .btn-outline-gold,
+html:not([data-theme="dark"]) .page-hero .btn-outline-gold:not(:hover):not(:focus):not(:active),
+html:not([data-theme="dark"]) .hero-cta-group .btn-outline-gold,
+html:not([data-theme="dark"]) .hero-cta-group .btn-outline-gold:not(:hover):not(:focus):not(:active),
 :root[data-theme="light"] .hero-home2 .btn-outline-gold,
-:root[data-theme="light"] .page-hero .btn-outline-gold {
+:root[data-theme="light"] .hero-home2 .btn-outline-gold:not(:hover):not(:focus):not(:active),
+:root[data-theme="light"] .page-hero .btn-outline-gold,
+:root[data-theme="light"] .page-hero .btn-outline-gold:not(:hover):not(:focus):not(:active),
+:root[data-theme="light"] .hero-cta-group .btn-outline-gold,
+:root[data-theme="light"] .hero-cta-group .btn-outline-gold:not(:hover):not(:focus):not(:active),
+body:not(.dark-mode) .hero-home2 .btn-outline-gold,
+body:not(.dark-mode) .hero-home2 .btn-outline-gold:not(:hover):not(:focus):not(:active),
+body:not(.dark-mode) .page-hero .btn-outline-gold,
+body:not(.dark-mode) .page-hero .btn-outline-gold:not(:hover):not(:focus):not(:active),
+body:not(.dark-mode) .hero-cta-group .btn-outline-gold,
+body:not(.dark-mode) .hero-cta-group .btn-outline-gold:not(:hover):not(:focus):not(:active) {
   color: #F5B700 !important;
   border-color: #F5B700 !important;
-  background: rgba(245, 183, 0, 0.1) !important;
+  background: rgba(245, 183, 0, 0.15) !important;
 }
 
 /* Stats in Hero Sections */
@@ -4278,6 +4508,22 @@ html:not([data-theme="dark"]) body:not(.dark-mode) .app-sidebar {
   border-right: 1px solid #e2e8f0 !important;
 }
 
+html:not([data-theme="dark"]) body:not(.dark-mode) .sidebar-utility-controls {
+  border-bottom-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .sidebar-utility-controls .utility-btn {
+  background: #f8fafc !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .sidebar-utility-controls .utility-btn:hover {
+  background: #ffffff !important;
+  border-color: var(--spotlight-gold) !important;
+  color: #b88300 !important;
+}
+
 html:not([data-theme="dark"]) body:not(.dark-mode) .app-sidebar .dash-tab-btn {
   background: transparent !important;
   border: 1px solid transparent !important;
@@ -4302,6 +4548,22 @@ html:not([data-theme="dark"]) body:not(.dark-mode) .app-sidebar .dash-tab-btn.ac
 }
 
 html:not([data-theme="dark"]) body:not(.dark-mode) .app-sidebar .dash-tab-btn.active svg {
+  color: #b88300 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .dash-billing-card .card-title {
+  color: #1e1b18 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .billing-icon-badge {
+  background: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .billing-icon-badge.gold {
+  background: rgba(245, 183, 0, 0.15) !important;
+  border-color: var(--spotlight-gold) !important;
   color: #b88300 !important;
 }
 

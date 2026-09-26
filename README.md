@@ -1,6 +1,6 @@
-# "The Setup" — Improv & Sketch Comedy Training School
+# "The Spotlight" — Improv & Sketch Comedy Training School
 
-A state-of-the-art multi-page website and Student LMS portal for **The Setup Improv & Sketch Comedy Training School**, built with a theatrical "Comedy Marquee" aesthetic, 3D spotlight tilt card mechanics, animated stage lighting, and WCAG 2.1 AA accessibility.
+A state-of-the-art multi-page website and Student LMS portal for **The Spotlight Comedy Academy**, built with a theatrical "Comedy Marquee" aesthetic, 3D spotlight tilt card mechanics, animated stage lighting, and WCAG 2.1 AA accessibility.
 
 ---
 
