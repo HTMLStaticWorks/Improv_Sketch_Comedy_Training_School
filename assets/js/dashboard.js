@@ -53,6 +53,48 @@
       window.theatreAuth.login('Alex Rivera');
     }
 
+    // Mobile Hamburger Menu Sidebar Toggle
+    const toggleBtn = document.getElementById('dashSidebarToggleBtn');
+    const sidebar = document.getElementById('dashSidebar');
+    const overlay = document.getElementById('dashSidebarOverlay');
+
+    function toggleMobileSidebar(forceClose) {
+      if (!sidebar) return;
+      const isOpen = forceClose === true ? false : !sidebar.classList.contains('mobile-open');
+      if (isOpen) {
+        sidebar.classList.add('mobile-open');
+        if (overlay) overlay.classList.add('active');
+        if (toggleBtn) {
+          const burger = toggleBtn.querySelector('.hamburger-icon');
+          const closeIcon = toggleBtn.querySelector('.close-icon');
+          if (burger) burger.style.display = 'none';
+          if (closeIcon) closeIcon.style.display = 'block';
+        }
+      } else {
+        sidebar.classList.remove('mobile-open');
+        if (overlay) overlay.classList.remove('active');
+        if (toggleBtn) {
+          const burger = toggleBtn.querySelector('.hamburger-icon');
+          const closeIcon = toggleBtn.querySelector('.close-icon');
+          if (burger) burger.style.display = 'block';
+          if (closeIcon) closeIcon.style.display = 'none';
+        }
+      }
+    }
+
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleMobileSidebar();
+      });
+    }
+
+    if (overlay) {
+      overlay.addEventListener('click', () => {
+        toggleMobileSidebar(true);
+      });
+    }
+
     // Tab Switching
     const tabBtns = document.querySelectorAll('.dash-tab-btn');
     const panels = document.querySelectorAll('.dash-panel');
@@ -68,6 +110,9 @@
         if (targetPanel) {
           targetPanel.classList.add('active');
         }
+
+        // Auto close mobile menu on tab selection
+        toggleMobileSidebar(true);
       });
     });
 
@@ -76,6 +121,7 @@
     if (logoutBtn) {
       logoutBtn.addEventListener('click', (e) => {
         e.preventDefault();
+        toggleMobileSidebar(true);
         window.theatreAuth.logout();
         setTimeout(() => {
           window.location.href = 'index.html';
@@ -163,7 +209,7 @@
             <div style="font-size: 0.75rem; font-weight: 700; color: ${badgeColor}; text-transform: uppercase;">
               ${m.status}
             </div>
-            <h4 style="font-size: 1rem; margin: 8px 0; color: #fff;">${m.level}</h4>
+            <h4 style="font-size: 1rem; margin: 8px 0;">${m.level}</h4>
             <div style="font-size: 0.82rem; color: var(--marquee-cream-muted);">${m.date}</div>
             <div class="progress-bar-fill">
               <span style="width: ${m.pct}%;"></span>
@@ -173,6 +219,49 @@
       });
       html += `</div>`;
       progressContainer.innerHTML = html;
+    }
+
+    const progressionDetails = document.getElementById('dashProgressionDetails');
+    if (progressionDetails) {
+      progressionDetails.innerHTML = `
+        <div class="card-grid grid-3" style="margin-top: 24px;">
+          <div class="theatre-card dark-style" style="align-items: stretch; text-align: left;">
+            <div class="card-subtitle">Attendance & Credit Log</div>
+            <h3 class="card-title" style="font-size: 1.25rem;">94% Attendance Rate</h3>
+            <p class="card-description" style="margin-bottom: 16px;">6 of 8 Level 2 sessions completed. 75% attendance mandatory for graduation certificate.</p>
+            <div style="background: rgba(255,255,255,0.05); padding: 12px; border-radius: 8px; font-size: 0.88rem;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                <span>Session Attendance</span>
+                <span style="color: #2ecc71; font-weight: 700;">6 / 8 Classes</span>
+              </div>
+              <div style="display: flex; justify-content: space-between;">
+                <span>Absences Allowed</span>
+                <span style="color: var(--spotlight-gold); font-weight: 700;">1 Remaining</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="theatre-card dark-style" style="align-items: stretch; text-align: left;">
+            <div class="card-subtitle">Curriculum Skills Mastery</div>
+            <h3 class="card-title" style="font-size: 1.25rem;">Key Competencies</h3>
+            <ul style="list-style: none; padding: 0; margin: 12px 0 0 0; font-size: 0.9rem; line-height: 1.8;">
+              <li style="color: #2ecc71;">✓ Active Listening & Agreement ("Yes, And")</li>
+              <li style="color: #2ecc71;">✓ Object Work & Spatial Awareness</li>
+              <li style="color: var(--spotlight-gold);">⟳ Emotional Stakes & Status Shifts (In Progress)</li>
+              <li style="color: var(--marquee-cream-muted);">○ Group Games & Tagouts (Level 3)</li>
+            </ul>
+          </div>
+
+          <div class="theatre-card dark-style" style="align-items: stretch; text-align: left;">
+            <div class="card-subtitle">Instructor Assessment</div>
+            <h3 class="card-title" style="font-size: 1.25rem;">Sarah Jenkins' Feedback</h3>
+            <blockquote style="font-style: italic; font-size: 0.88rem; color: var(--marquee-cream-muted); border-left: 3px solid var(--spotlight-gold); padding-left: 12px; margin: 12px 0;">
+              "Alex shows great natural commitment to grounded scene partners. Work on initiating scenes with clearer physical choices!"
+            </blockquote>
+            <span class="btn btn-sm btn-outline-gold" style="display: inline-block; text-align: center; margin-top: 8px;">View Full Feedback Log</span>
+          </div>
+        </div>
+      `;
     }
 
     // 3. Class Enrollment Catalog

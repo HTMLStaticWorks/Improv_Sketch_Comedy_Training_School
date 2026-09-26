@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="../assets/css/dark-mode.css">
   <link rel="stylesheet" href="../assets/css/rtl.css" id="rtl-stylesheet" disabled>
 </head>
-<body class="dark-mode" style="min-height: 100vh; display: flex; flex-direction: column;">
+<body style="min-height: 100vh; display: flex; flex-direction: column;">
   <!-- WCAG Skip Link -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -30,7 +30,7 @@
     </button>
   </div>
 
-  <main id="main-content" style="flex: 1; display: flex; align-items: center; justify-content: center; position: relative; padding: var(--sp-6) var(--sp-3); overflow: hidden; background: radial-gradient(circle at center, #2e1a47 0%, #121212 90%);">
+  <main id="main-content" class="auth-main" style="flex: 1; display: flex; align-items: center; justify-content: center; position: relative; padding: var(--sp-6) var(--sp-3); overflow: hidden;">
     <!-- 3D Stage Animated Canvas -->
     <div class="stage-canvas-container" aria-hidden="true">
       <canvas class="stage-canvas"></canvas>
@@ -40,8 +40,8 @@
     <div class="curtain-drape-right" aria-hidden="true"></div>
 
     <!-- Centered Registration Card -->
-    <div class="container" style="max-width: 540px; position: relative; z-index: 10;">
-      <div class="theatre-card dark-style" style="border: 2px solid var(--spotlight-gold); padding: var(--sp-5); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85);">
+    <div class="container auth-container" style="max-width: 540px; position: relative; z-index: 10;">
+      <div class="theatre-card dark-style auth-card-container" style="border: 2px solid var(--spotlight-gold); padding: var(--sp-5); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85);">
         <!-- Brand Logo & Name -->
         <a href="index.html" class="auth-card-logo" aria-label="The Setup Comedy School Home" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; margin-bottom: 20px;">
           <div class="logo-badge" style="width: 52px; height: 52px; background: var(--curtain-crimson); border: 2px solid var(--spotlight-gold); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 20px rgba(245, 183, 0, 0.35); margin-bottom: 10px;">

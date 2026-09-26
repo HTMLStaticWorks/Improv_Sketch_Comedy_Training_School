@@ -12,6 +12,10 @@ body.dark-mode {
   --bg-card: #222222;
   --bg-dark-section: #0a0812;
 
+  --marquee-cream: #FFF8ED;
+  --marquee-cream-muted: #dcd3c3;
+  --spotlight-gold: #F5B700;
+
   --text-primary: #FFF8ED;
   --text-secondary: #dcd3c3;
   --text-muted: #a69c8e;
@@ -178,9 +182,26 @@ body.dark-mode .theatre-table tr:hover {
   background: rgba(245, 183, 0, 0.08) !important;
 }
 
-body.dark-mode .faq-question {
+body.dark-mode .faq-item,
+:root[data-theme="dark"] .faq-item {
+  background: #202020 !important;
+  border-color: rgba(245, 183, 0, 0.35) !important;
+}
+
+body.dark-mode .faq-question,
+:root[data-theme="dark"] .faq-question {
   color: #FFF8ED !important;
   background: transparent !important;
+}
+
+body.dark-mode .faq-answer,
+:root[data-theme="dark"] .faq-answer {
+  color: #dcd3c3 !important;
+}
+
+body.dark-mode .faq-icon,
+:root[data-theme="dark"] .faq-icon {
+  color: #F5B700 !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -231,20 +252,66 @@ body.dark-mode .utility-btn:hover {
   color: var(--spotlight-gold-light) !important;
 }
 
-body.dark-mode .btn-login {
+body.dark-mode .btn-gold {
+  background: var(--spotlight-gold) !important;
+  color: #121212 !important;
+  border-color: var(--spotlight-gold) !important;
+}
+
+body.dark-mode .btn-gold:hover,
+body.dark-mode .btn-gold:focus,
+body.dark-mode .btn-gold:active {
+  background: #ffcf33 !important;
+  border-color: #ffcf33 !important;
+  color: #121212 !important;
+  box-shadow: 0 8px 25px rgba(245, 183, 0, 0.6), 0 0 15px rgba(255, 207, 51, 0.4) !important;
+}
+
+body.dark-mode .btn-primary {
+  background: var(--curtain-crimson) !important;
+  color: var(--marquee-cream) !important;
+  border-color: var(--curtain-crimson) !important;
+}
+
+body.dark-mode .btn-primary:hover,
+body.dark-mode .btn-primary:focus,
+body.dark-mode .btn-primary:active {
+  background: #a5162f !important;
+  border-color: #a5162f !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode .btn-outline-gold:not(:hover):not(:focus):not(:active) {
+  background: transparent !important;
+  color: var(--spotlight-gold) !important;
+  border-color: var(--spotlight-gold) !important;
+}
+
+body.dark-mode .btn-outline-gold:hover,
+body.dark-mode .btn-outline-gold:focus,
+body.dark-mode .btn-outline-gold:active {
+  background: var(--spotlight-gold) !important;
+  border-color: var(--spotlight-gold) !important;
+  color: #121212 !important;
+  box-shadow: 0 0 15px var(--spotlight-gold-glow) !important;
+}
+
+body.dark-mode .btn-login:not(:hover):not(:focus):not(:active) {
   color: var(--spotlight-gold) !important;
   background: rgba(255, 255, 255, 0.06) !important;
   border: 1.5px solid var(--spotlight-gold) !important;
 }
 
-body.dark-mode .btn-login:hover {
+body.dark-mode .btn-login:hover,
+body.dark-mode .btn-login:focus,
+body.dark-mode .btn-login:active {
   background: var(--spotlight-gold) !important;
   color: var(--ink-black) !important;
   border-color: var(--spotlight-gold) !important;
   box-shadow: 0 0 14px rgba(245, 183, 0, 0.4) !important;
 }
 
-body.dark-mode .btn-dashboard {
+body.dark-mode .btn-dashboard:not(:hover):not(:focus):not(:active) {
   background: linear-gradient(135deg, var(--spotlight-gold) 0%, #ffc41e 100%) !important;
   color: var(--ink-black) !important;
   border: 2px solid #FFF8ED !important;
@@ -252,7 +319,9 @@ body.dark-mode .btn-dashboard {
   box-shadow: 0 0 18px rgba(245, 183, 0, 0.5) !important;
 }
 
-body.dark-mode .btn-dashboard:hover {
+body.dark-mode .btn-dashboard:hover,
+body.dark-mode .btn-dashboard:focus,
+body.dark-mode .btn-dashboard:active {
   background: linear-gradient(135deg, #ffc41e 0%, var(--spotlight-gold) 100%) !important;
   color: var(--ink-black) !important;
   box-shadow: 0 0 25px rgba(245, 183, 0, 0.75) !important;
@@ -278,12 +347,14 @@ body.dark-mode .site-nav.mobile-open {
   color: #FFF8ED !important;
 }
 
-body.dark-mode .btn-outline {
+body.dark-mode .btn-outline:not(:hover):not(:focus):not(:active) {
   color: #FFF8ED !important;
   border-color: rgba(255, 248, 237, 0.4) !important;
 }
 
-body.dark-mode .btn-outline:hover {
+body.dark-mode .btn-outline:hover,
+body.dark-mode .btn-outline:focus,
+body.dark-mode .btn-outline:active {
   background: var(--spotlight-gold) !important;
   color: #121212 !important;
   border-color: var(--spotlight-gold) !important;

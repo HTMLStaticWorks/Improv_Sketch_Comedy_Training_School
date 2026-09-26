@@ -474,66 +474,102 @@ body.menu-open {
 /* Primary Button: Curtain Crimson with Marquee Edge */
 .btn-primary {
   background: var(--curtain-crimson);
-  color: var(--marquee-cream);
+  color: var(--marquee-cream) !important;
   border-color: var(--curtain-crimson);
   box-shadow: 0 4px 15px rgba(196, 30, 58, 0.35);
 }
 
-.btn-primary:hover {
-  background: #a5162f;
-  border-color: #a5162f;
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background: #a5162f !important;
+  border-color: #a5162f !important;
   box-shadow: 0 6px 20px rgba(196, 30, 58, 0.55);
   transform: translateY(-2px);
-  color: #fff;
+  color: #ffffff !important;
 }
 
 /* Secondary Button: Spotlight Gold */
 .btn-gold {
   background: var(--spotlight-gold);
-  color: var(--ink-black);
+  color: var(--ink-black) !important;
   border-color: var(--spotlight-gold);
   font-weight: 700;
   box-shadow: 0 4px 15px rgba(245, 183, 0, 0.3);
   transition: all var(--transition-fast);
 }
 
-.btn-gold:hover {
-  background: #ffcf33;
-  border-color: #ffcf33;
+.btn-gold:hover,
+.btn-gold:focus,
+.btn-gold:active {
+  background: #ffcf33 !important;
+  border-color: #ffcf33 !important;
   box-shadow: 0 8px 25px rgba(245, 183, 0, 0.6), 0 0 15px rgba(255, 207, 51, 0.4);
   transform: translateY(-2px) scale(1.01);
-  color: var(--ink-black);
+  color: #121212 !important;
 }
 
-/* Outline Button */
-.btn-outline {
+/* Outline Button - Context Aware */
+.btn-outline:not(:hover):not(:focus):not(:active) {
   background: transparent;
-  color: var(--marquee-cream);
+  color: var(--text-primary) !important;
+  border-color: rgba(18, 18, 18, 0.35);
+}
+
+.section-dark .btn-outline:not(:hover):not(:focus):not(:active),
+.section-violet .btn-outline:not(:hover):not(:focus):not(:active),
+.page-hero .btn-outline:not(:hover):not(:focus):not(:active),
+.site-footer .btn-outline:not(:hover):not(:focus):not(:active),
+.theatre-card.dark-style .btn-outline:not(:hover):not(:focus):not(:active) {
+  color: var(--marquee-cream) !important;
   border-color: rgba(255, 248, 237, 0.5);
 }
 
-.btn-outline:hover {
-  background: rgba(255, 248, 237, 0.1);
-  border-color: var(--spotlight-gold);
-  color: var(--spotlight-gold);
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active,
+.section-dark .btn-outline:hover,
+.section-violet .btn-outline:hover,
+.page-hero .btn-outline:hover,
+.site-footer .btn-outline:hover,
+.theatre-card.dark-style .btn-outline:hover {
+  background: var(--spotlight-gold) !important;
+  border-color: var(--spotlight-gold) !important;
+  color: #121212 !important;
   transform: translateY(-2px);
 }
 
-.btn-outline-gold {
+/* Outline Gold Button */
+.btn-outline-gold:not(:hover):not(:focus):not(:active) {
   background: transparent;
-  color: var(--spotlight-gold);
+  color: #9e7500 !important;
   border-color: var(--spotlight-gold);
+  font-weight: 600;
 }
 
-.btn-outline-gold:hover {
-  background: var(--spotlight-gold);
-  color: var(--ink-black);
+.section-dark .btn-outline-gold:not(:hover):not(:focus):not(:active),
+.section-violet .btn-outline-gold:not(:hover):not(:focus):not(:active),
+.page-hero .btn-outline-gold:not(:hover):not(:focus):not(:active),
+.theatre-card.dark-style .btn-outline-gold:not(:hover):not(:focus):not(:active) {
+  color: var(--spotlight-gold) !important;
+}
+
+.btn-outline-gold:hover,
+.btn-outline-gold:focus,
+.btn-outline-gold:active,
+.section-dark .btn-outline-gold:hover,
+.section-violet .btn-outline-gold:hover,
+.page-hero .btn-outline-gold:hover,
+.theatre-card.dark-style .btn-outline-gold:hover {
+  background: var(--spotlight-gold) !important;
+  border-color: var(--spotlight-gold) !important;
+  color: #121212 !important;
   box-shadow: 0 0 15px var(--spotlight-gold-glow);
 }
 
 /* Auth Buttons in Nav */
 .btn-login {
-  color: var(--curtain-crimson);
+  color: var(--curtain-crimson) !important;
   background: rgba(196, 30, 58, 0.06);
   border: 1.5px solid var(--curtain-crimson);
   padding: 8px 18px;
@@ -543,17 +579,19 @@ body.menu-open {
   transition: all var(--transition-fast);
 }
 
-.btn-login:hover {
-  background: var(--curtain-crimson);
-  border-color: var(--curtain-crimson);
-  color: #FFF8ED;
+.btn-login:hover,
+.btn-login:focus,
+.btn-login:active {
+  background: var(--curtain-crimson) !important;
+  border-color: var(--curtain-crimson) !important;
+  color: #FFF8ED !important;
   box-shadow: 0 4px 14px rgba(196, 30, 58, 0.35);
   transform: translateY(-1px);
 }
 
 .btn-dashboard {
   background: linear-gradient(135deg, var(--stage-violet) 0%, #911227 100%);
-  color: #FFF8ED;
+  color: #FFF8ED !important;
   border: 2px solid var(--spotlight-gold);
   padding: 8px 18px;
   font-size: 0.9rem;
@@ -564,9 +602,11 @@ body.menu-open {
   transition: all var(--transition-fast);
 }
 
-.btn-dashboard:hover {
+.btn-dashboard:hover,
+.btn-dashboard:focus,
+.btn-dashboard:active {
   background: linear-gradient(135deg, #911227 0%, var(--stage-violet) 100%);
-  color: var(--spotlight-gold);
+  color: var(--spotlight-gold) !important;
   border-color: var(--spotlight-gold-light);
   box-shadow: 0 6px 20px rgba(196, 30, 58, 0.4), 0 0 16px rgba(245, 183, 0, 0.5);
   transform: translateY(-2px);
@@ -786,13 +826,20 @@ body.menu-open {
 
 .card-subtitle {
   font-size: 0.88rem;
-  font-weight: 600;
-  color: var(--spotlight-gold);
+  font-weight: 700;
+  color: #9e7500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-bottom: var(--sp-2);
   transform: translateZ(15px);
   text-align: center;
+}
+
+.section-dark .card-subtitle,
+.section-violet .card-subtitle,
+.theatre-card.dark-style .card-subtitle,
+body.dark-mode .card-subtitle {
+  color: var(--spotlight-gold) !important;
 }
 
 .card-description {
@@ -1202,6 +1249,11 @@ body.menu-open {
   background-position: center 40%;
   min-height: auto;
   padding-bottom: var(--sp-8);
+}
+
+.page-hero-about {
+  background-image: url('../images/hero-curtain-stage.webp');
+  background-position: center 40%;
 }
 
 /* Theatrical Multi-Layer Gradient Overlays for Depth, Contrast & Stage Glow */
@@ -1806,14 +1858,240 @@ body.menu-open {
 }
 
 /* ==========================================================================
-   Student LMS Dashboard Modules
+   Student LMS Dashboard App Shell Architecture (Matching Reference 1 & 2)
    ========================================================================== */
-.dashboard-wrapper {
-  padding-top: var(--sp-5);
-  padding-bottom: var(--sp-10);
+.dashboard-body {
+  margin: 0;
+  padding: 0;
+  background: #111827;
+  color: #f8fafc;
+  overflow-x: hidden;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #111827;
+}
+
+/* Topbar Header (Matching Reference 2 Model) */
+.app-topbar {
+  height: 64px;
+  background: #141c27;
+  border-bottom: 1px solid #1f293d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.topbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.topbar-logo .logo-badge {
+  width: 38px;
+  height: 38px;
+  background: var(--curtain-crimson);
+  border: 1.5px solid var(--spotlight-gold);
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0 0 12px rgba(245, 183, 0, 0.3);
+}
+
+.topbar-logo .logo-title {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.topbar-logo .logo-sub {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--spotlight-gold);
+  font-style: italic;
+  margin-top: 3px;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.topbar-avatar-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--spotlight-gold);
+  background: #1c2636;
+  padding: 0;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 0 12px rgba(245, 183, 0, 0.3);
+}
+
+.topbar-avatar-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 16px rgba(245, 183, 0, 0.5);
+}
+
+.topbar-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* App Body Layout */
+.app-body {
+  display: flex;
+  flex: 1;
+  min-height: calc(100vh - 64px);
+}
+
+/* Left Vertical Sidebar (Matching Reference 1 Model) */
+.app-sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  background: #141c27;
+  border-right: 1px solid #1f293d;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px 14px 20px 14px;
+  position: sticky;
+  top: 64px;
+  height: calc(100vh - 64px);
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Sidebar Tab Item Button (Matching Reference 1 Model) */
+.dash-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 16px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: #94a3b8;
+  font-weight: 500;
+  font-size: 0.94rem;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dash-tab-btn svg {
+  color: #94a3b8;
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+}
+
+.dash-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+.dash-tab-btn:hover svg {
+  color: var(--spotlight-gold);
+}
+
+/* Reference 1 Active Pill Container Model */
+.dash-tab-btn.active {
+  background: #252f3e !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.dash-tab-btn.active svg {
+  color: var(--spotlight-gold) !important;
+}
+
+/* Sidebar Bottom Footer (Matching Reference 1 Model) */
+.sidebar-footer {
+  padding-top: 14px;
+  border-top: 1px solid #1f293d;
+}
+
+.sidebar-logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 0.94rem;
+  font-weight: 500;
+  color: #94a3b8;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+.sidebar-logout-btn svg {
+  color: #94a3b8;
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+}
+
+.sidebar-logout-btn:hover {
+  background: rgba(239, 68, 68, 0.12);
+  color: #f87171;
+}
+
+.sidebar-logout-btn:hover svg {
+  color: #f87171;
+}
+
+/* Main Content View Area */
+.app-main-content {
+  flex: 1;
+  padding: 28px;
+  overflow-y: auto;
+  min-width: 0;
   background: var(--ink-black);
-  color: var(--marquee-cream);
-  min-height: 90vh;
+}
+
+.dashboard-content-container {
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .dashboard-header-card {
@@ -1851,40 +2129,75 @@ body.menu-open {
   flex-wrap: nowrap;
 }
 
-.dashboard-tabs-bar {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  border-bottom: 2px solid rgba(245, 183, 0, 0.2);
-  margin-bottom: var(--sp-5);
-  overflow-x: auto;
-  padding-bottom: 2px;
-}
-
-.dash-tab-btn {
-  padding: 12px 20px;
-  background: transparent;
-  border: none;
-  border-bottom: 3px solid transparent;
-  color: var(--marquee-cream-muted);
-  font-weight: 600;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: all var(--transition-fast);
-}
-
-.dash-tab-btn.active,
-.dash-tab-btn:hover {
-  color: var(--spotlight-gold);
-  border-bottom-color: var(--spotlight-gold);
-}
-
 .dash-panel {
   display: none;
 }
 
 .dash-panel.active {
   display: block;
+}
+
+.dash-panel-title {
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin: 0 0 4px 0;
+}
+
+.dash-panel-sub {
+  color: var(--marquee-cream-muted);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.dash-sidebar-toggle {
+  display: none;
+  margin-right: 8px;
+}
+
+.sidebar-backdrop {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .dash-sidebar-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .app-sidebar {
+    position: fixed;
+    top: 64px;
+    left: -285px;
+    width: 275px;
+    height: calc(100vh - 64px);
+    z-index: 1000;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5);
+    background: #141c27;
+  }
+
+  .app-sidebar.mobile-open {
+    transform: translateX(285px);
+  }
+
+  .sidebar-backdrop.active {
+    display: block;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
+    z-index: 999;
+  }
+
+  .dash-tab-btn {
+    white-space: normal;
+    width: 100%;
+    flex-shrink: 0;
+  }
 }
 
 /* Visual Course Progression Tracker */
@@ -2220,7 +2533,7 @@ body.menu-open {
 
   .hero-home1 {
     min-height: auto;
-    padding: calc(var(--header-height) + var(--sp-4)) var(--sp-2) var(--sp-6) var(--sp-2);
+    padding: var(--sp-6) var(--sp-3) var(--sp-8) var(--sp-3) !important;
   }
 
   /* Equal sizing for all stacked hero CTA buttons on mobile view */
@@ -2284,7 +2597,7 @@ body.menu-open {
     display: flex !important;
     flex-direction: column !important;
     grid-template-columns: 1fr !important;
-    gap: 16px !important;
+    gap: 0 !important;
     width: 100% !important;
   }
 
@@ -2293,21 +2606,59 @@ body.menu-open {
     padding: var(--sp-4) var(--sp-3) !important;
   }
 
+  /* Increase card box width on mobile for Login and Register pages */
+  main.auth-main,
+  main#main-content.auth-main {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  .auth-container,
+  .container.auth-container {
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .auth-card-container,
+  .theatre-card.dark-style.auth-card-container {
+    padding: 24px 16px !important;
+    border-radius: 16px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .auth-card-container h1 {
+    font-size: 1.5rem !important;
+    margin: 8px 0 6px 0 !important;
+  }
+
+  .auth-card-container .card-description {
+    font-size: 0.88rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 20px !important;
+  }
+
   .form-group {
     width: 100% !important;
-    margin-bottom: 0 !important;
+    margin-bottom: 16px !important;
   }
 
   .form-group .form-control {
     width: 100% !important;
     box-sizing: border-box !important;
-    font-size: 1rem !important;
+    font-size: 0.95rem !important;
+    padding: 12px 14px !important;
+    border-radius: 8px !important;
   }
 
   .form-label {
     white-space: normal !important;
-    font-size: 0.9rem !important;
+    font-size: 0.88rem !important;
     line-height: 1.3 !important;
+    margin-bottom: 6px !important;
+    display: inline-block !important;
   }
 
   .contact-btn-wrap {
@@ -2411,8 +2762,12 @@ body.menu-open {
   body > main#main-content,
   body.dark-mode > main#main-content,
   main#main-content {
-    padding-top: 80px !important;
+    padding-top: 0 !important;
     align-items: flex-start !important;
+  }
+
+  main#main-content.auth-main {
+    padding-top: 24px !important;
   }
 
   /* Prevent Any Button Text Cropping Across Mobile Pages */
@@ -2444,7 +2799,7 @@ body.menu-open {
 
   .page-hero {
     min-height: auto;
-    padding: calc(var(--header-height) + var(--sp-4)) var(--sp-2) var(--sp-6) var(--sp-2);
+    padding: var(--sp-6) var(--sp-3) var(--sp-8) var(--sp-3) !important;
   }
 
   .page-hero h1 {
@@ -3221,6 +3576,42 @@ html.is-ipad-pro .site-nav.mobile-open .nav-dashboard-btn {
   border-radius: var(--radius-sm) !important;
 }
 
+/* --------------------------------------------------------------------------
+   IPAD PRO VIEWS: DASHBOARD PAGE CARDS 2*2 GRID
+   Forces stats overview and course level catalog cards into a 2x2 layout
+   (2 columns x 2 rows) on all iPad Pro orientations and tablet viewports.
+   -------------------------------------------------------------------------- */
+@media (min-width: 640px) and (max-width: 1366px) {
+  .dashboard-body .grid-4,
+  .dashboard-body #dashStatsContainer,
+  .dashboard-body #dashCatalogContainer .card-grid,
+  .dashboard-content-container .grid-4,
+  .dashboard-content-container .card-grid.grid-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: var(--sp-4) !important;
+  }
+}
+
+html.is-ipad-pro .dashboard-body .grid-4,
+html.is-ipad-pro .dashboard-body #dashStatsContainer,
+html.is-ipad-pro .dashboard-body #dashCatalogContainer .card-grid,
+html.is-ipad-pro .dashboard-content-container .grid-4,
+html.is-ipad-pro .dashboard-content-container .card-grid.grid-4 {
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: var(--sp-4) !important;
+}
+
+@media (hover: none) and (pointer: coarse) and (min-width: 640px) and (max-width: 1366px) {
+  .dashboard-body .grid-4,
+  .dashboard-body #dashStatsContainer,
+  .dashboard-body #dashCatalogContainer .card-grid,
+  .dashboard-content-container .grid-4,
+  .dashboard-content-container .card-grid.grid-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: var(--sp-4) !important;
+  }
+}
+
 /* ==========================================================================
    Social Auth Buttons & Divider
    ========================================================================== */
@@ -3295,7 +3686,765 @@ html.is-ipad-pro .site-nav.mobile-open .nav-dashboard-btn {
   transition: all var(--transition-fast);
 }
 
-.theatre-card a:hover {
+.theatre-card a:not(.btn):hover {
   color: var(--spotlight-gold-light) !important;
   text-shadow: 0 0 10px rgba(245, 183, 0, 0.4);
 }
+
+/* Form options row (Remember me & Forgot Password) for Login Page */
+.form-options-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.form-options-row .checkbox-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  flex-shrink: 1;
+}
+
+.form-options-row label {
+  white-space: nowrap;
+  font-size: 0.85rem;
+  color: var(--marquee-cream-muted);
+  cursor: pointer;
+  margin-bottom: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.form-options-row a {
+  white-space: nowrap;
+  font-size: 0.82rem;
+  color: var(--spotlight-gold);
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .form-options-row {
+    gap: 6px;
+  }
+  .form-options-row label {
+    font-size: 0.75rem;
+  }
+  .form-options-row a {
+    font-size: 0.75rem;
+  }
+  .auth-card-container {
+    padding: var(--sp-4) !important;
+  }
+}
+
+/* ==========================================================================
+   LIGHT THEME OVERRIDES: Ensures 100% White/Light Clean Aesthetics Across ALL Pages
+   ========================================================================== */
+html:not([data-theme="dark"]),
+:root[data-theme="light"] {
+  --marquee-cream: #1e1b18;
+  --marquee-cream-muted: #574e44;
+  --text-primary: #1e1b18;
+  --text-secondary: #574e44;
+  --text-muted: #6e6355;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode),
+:root[data-theme="light"] body {
+  background-color: #ffffff !important;
+  color: #1e1b18 !important;
+}
+
+/* Automatic Overrides for Inline Styled Text in Light Mode */
+html:not([data-theme="dark"]) body:not(.dark-mode) [style*="color: #fff"],
+html:not([data-theme="dark"]) body:not(.dark-mode) [style*="color: #ffffff"],
+html:not([data-theme="dark"]) body:not(.dark-mode) [style*="color:#fff"],
+html:not([data-theme="dark"]) body:not(.dark-mode) [style*="color:#ffffff"] {
+  color: #1e1b18 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) [style*="color: var(--marquee-cream-muted)"],
+html:not([data-theme="dark"]) body:not(.dark-mode) [style*="color:var(--marquee-cream-muted)"] {
+  color: #574e44 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) [style*="color: var(--marquee-cream)"],
+html:not([data-theme="dark"]) body:not(.dark-mode) [style*="color:var(--marquee-cream)"] {
+  color: #1e1b18 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) [style*="color: var(--spotlight-gold)"],
+html:not([data-theme="dark"]) body:not(.dark-mode) [style*="color:var(--spotlight-gold)"] {
+  color: #b88300 !important;
+}
+
+/* 1. Header & Navigation in Light Mode */
+html:not([data-theme="dark"]) body:not(.dark-mode) .site-header {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border-bottom: 2px solid var(--curtain-crimson) !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .site-header.menu-active {
+  background: #ffffff !important;
+  border-bottom-color: var(--spotlight-gold) !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .site-header .site-nav:not(.mobile-open) .nav-link {
+  color: #1e1b18 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .site-header .site-nav:not(.mobile-open) .nav-link:hover,
+html:not([data-theme="dark"]) body:not(.dark-mode) .site-header .site-nav:not(.mobile-open) .nav-link.active {
+  color: var(--curtain-crimson) !important;
+}
+
+/* Mobile Hamburger Menu Nav Links in Light Mode (Crisp White Text on Dark Overlay) */
+html:not([data-theme="dark"]) body:not(.dark-mode) .site-nav.mobile-open .nav-link,
+:root[data-theme="light"] .site-nav.mobile-open .nav-link {
+  color: #FFF8ED !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(245, 183, 0, 0.25) !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .site-nav.mobile-open .nav-link:hover,
+html:not([data-theme="dark"]) body:not(.dark-mode) .site-nav.mobile-open .nav-link.active,
+:root[data-theme="light"] .site-nav.mobile-open .nav-link:hover,
+:root[data-theme="light"] .site-nav.mobile-open .nav-link.active {
+  background: var(--curtain-crimson) !important;
+  color: #FFF8ED !important;
+  border-color: var(--spotlight-gold) !important;
+  box-shadow: 0 6px 20px rgba(196, 30, 58, 0.45), 0 0 12px rgba(245, 183, 0, 0.35) !important;
+}
+
+/* 2. Hero Sections in Light Mode (All Pages Match Home 1 Stage & Background Image Glow) */
+.hero-home1,
+.hero-home1 .hero-content,
+.hero-home2,
+.hero-home2 .home2-lead,
+.page-hero,
+.page-hero .container,
+html:not([data-theme="dark"]) .hero-home1,
+html:not([data-theme="dark"]) .hero-home2,
+html:not([data-theme="dark"]) .page-hero,
+:root[data-theme="light"] .hero-home1,
+:root[data-theme="light"] .hero-home2,
+:root[data-theme="light"] .page-hero {
+  color: #FFF8ED !important;
+}
+
+/* Home 2 Hero Background in Light Mode (Matches Home 1 Dark Stage Vibe) */
+html:not([data-theme="dark"]) body:not(.dark-mode) .hero-home2,
+:root[data-theme="light"] .hero-home2 {
+  background: radial-gradient(circle at 50% 30%, #301948 0%, #121212 85%) !important;
+  color: #FFF8ED !important;
+}
+
+/* Inner Page Hero Gradient Overlays in Light Mode (Preserves Dark Stage Contrast over BG Images) */
+html:not([data-theme="dark"]) body:not(.dark-mode) .page-hero::before,
+:root[data-theme="light"] .page-hero::before {
+  background: 
+    radial-gradient(ellipse at 50% 15%, rgba(245, 183, 0, 0.16) 0%, transparent 65%),
+    linear-gradient(180deg, 
+      rgba(18, 18, 18, 0.80) 0%, 
+      rgba(45, 27, 78, 0.74) 45%, 
+      rgba(18, 18, 18, 0.94) 86%,
+      #121212 100%
+    ) !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .page-hero::after,
+:root[data-theme="light"] .page-hero::after {
+  background: radial-gradient(circle at 50% 0%, rgba(196, 30, 58, 0.20) 0%, transparent 60%) !important;
+}
+
+/* Hero Headings (H1 White + Gold Text Glow like Home 1) */
+.hero-home1 .hero-title,
+.hero-home2 h1,
+.page-hero h1,
+html:not([data-theme="dark"]) .hero-home1 .hero-title,
+html:not([data-theme="dark"]) .hero-home2 h1,
+html:not([data-theme="dark"]) .page-hero h1,
+:root[data-theme="light"] .hero-home1 .hero-title,
+:root[data-theme="light"] .hero-home2 h1,
+:root[data-theme="light"] .page-hero h1 {
+  color: #ffffff !important;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 0 30px rgba(245, 183, 0, 0.35) !important;
+}
+
+.hero-home1 .hero-title span,
+.hero-home2 h1 span,
+.page-hero h1 span,
+html:not([data-theme="dark"]) .hero-home1 .hero-title span,
+html:not([data-theme="dark"]) .hero-home2 h1 span,
+html:not([data-theme="dark"]) .page-hero h1 span,
+:root[data-theme="light"] .hero-home1 .hero-title span,
+:root[data-theme="light"] .hero-home2 h1 span,
+:root[data-theme="light"] .page-hero h1 span {
+  color: #F5B700 !important;
+}
+
+/* Subtitles, Descriptions, & Lead Text inside All Heroes (Cream/Muted White like Home 1) */
+.hero-home1 .hero-subtitle,
+.hero-home2 p,
+.page-hero p,
+.page-hero .hero-lead-text,
+html:not([data-theme="dark"]) .hero-home1 .hero-subtitle,
+html:not([data-theme="dark"]) .hero-home2 p,
+html:not([data-theme="dark"]) .page-hero p,
+html:not([data-theme="dark"]) .page-hero .hero-lead-text,
+:root[data-theme="light"] .hero-home1 .hero-subtitle,
+:root[data-theme="light"] .hero-home2 p,
+:root[data-theme="light"] .page-hero p,
+:root[data-theme="light"] .page-hero .hero-lead-text {
+  color: #dcd3c3 !important;
+}
+
+/* Eyebrows, Section Tags & Hero Pills in Light Mode (Gold Border & Glow like Home 1) */
+.hero-home1 .hero-eyebrow,
+.hero-home2 .section-tag,
+.page-hero .section-tag,
+.page-hero .hero-pill,
+html:not([data-theme="dark"]) .hero-home1 .hero-eyebrow,
+html:not([data-theme="dark"]) .hero-home2 .section-tag,
+html:not([data-theme="dark"]) .page-hero .section-tag,
+html:not([data-theme="dark"]) .page-hero .hero-pill,
+:root[data-theme="light"] .hero-home1 .hero-eyebrow,
+:root[data-theme="light"] .hero-home2 .section-tag,
+:root[data-theme="light"] .page-hero .section-tag,
+:root[data-theme="light"] .page-hero .hero-pill {
+  color: #F5B700 !important;
+  border-color: #F5B700 !important;
+  background: rgba(245, 183, 0, 0.15) !important;
+}
+
+/* Breadcrumbs in Hero Banners */
+.page-hero .breadcrumb-item,
+.page-hero .breadcrumb-item a,
+html:not([data-theme="dark"]) .page-hero .breadcrumb-item,
+html:not([data-theme="dark"]) .page-hero .breadcrumb-item a,
+:root[data-theme="light"] .page-hero .breadcrumb-item,
+:root[data-theme="light"] .page-hero .breadcrumb-item a {
+  color: #dcd3c3 !important;
+}
+
+.page-hero .breadcrumb-item.active,
+html:not([data-theme="dark"]) .page-hero .breadcrumb-item.active,
+:root[data-theme="light"] .page-hero .breadcrumb-item.active {
+  color: #F5B700 !important;
+}
+
+/* Outline Buttons in All Heroes in Light Mode */
+.hero-home1 .btn-outline,
+.hero-home2 .btn-outline,
+.page-hero .btn-outline,
+html:not([data-theme="dark"]) .hero-home1 .btn-outline,
+html:not([data-theme="dark"]) .hero-home2 .btn-outline,
+html:not([data-theme="dark"]) .page-hero .btn-outline,
+:root[data-theme="light"] .hero-home1 .btn-outline,
+:root[data-theme="light"] .hero-home2 .btn-outline,
+:root[data-theme="light"] .page-hero .btn-outline {
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.hero-home1 .btn-outline:hover,
+.hero-home2 .btn-outline:hover,
+.page-hero .btn-outline:hover,
+html:not([data-theme="dark"]) .hero-home1 .btn-outline:hover,
+html:not([data-theme="dark"]) .hero-home2 .btn-outline:hover,
+html:not([data-theme="dark"]) .page-hero .btn-outline:hover,
+:root[data-theme="light"] .hero-home1 .btn-outline:hover,
+:root[data-theme="light"] .hero-home2 .btn-outline:hover,
+:root[data-theme="light"] .page-hero .btn-outline:hover {
+  color: #F5B700 !important;
+  border-color: #F5B700 !important;
+  background: rgba(245, 183, 0, 0.15) !important;
+}
+
+.hero-home2 .btn-outline-gold,
+.page-hero .btn-outline-gold,
+html:not([data-theme="dark"]) .hero-home2 .btn-outline-gold,
+html:not([data-theme="dark"]) .page-hero .btn-outline-gold,
+:root[data-theme="light"] .hero-home2 .btn-outline-gold,
+:root[data-theme="light"] .page-hero .btn-outline-gold {
+  color: #F5B700 !important;
+  border-color: #F5B700 !important;
+  background: rgba(245, 183, 0, 0.1) !important;
+}
+
+/* Stats in Hero Sections */
+.hero-home1 .stat-number,
+.page-hero .stat-number,
+html:not([data-theme="dark"]) .hero-home1 .stat-number,
+html:not([data-theme="dark"]) .page-hero .stat-number,
+:root[data-theme="light"] .hero-home1 .stat-number,
+:root[data-theme="light"] .page-hero .stat-number {
+  color: #F5B700 !important;
+}
+
+.hero-home1 .stat-label,
+.page-hero .stat-label,
+html:not([data-theme="dark"]) .hero-home1 .stat-label,
+html:not([data-theme="dark"]) .page-hero .stat-label,
+:root[data-theme="light"] .hero-home1 .stat-label,
+:root[data-theme="light"] .page-hero .stat-label {
+  color: #dcd3c3 !important;
+}
+
+/* Interactive Path Selector Widget inside Home 2 Hero in Light Mode */
+html:not([data-theme="dark"]) body:not(.dark-mode) .hero-home2 .path-selector-widget,
+:root[data-theme="light"] .hero-home2 .path-selector-widget {
+  background: rgba(18, 18, 18, 0.90) !important;
+  color: #FFF8ED !important;
+  border: 1px solid rgba(245, 183, 0, 0.4) !important;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5) !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .hero-home2 .path-selector-widget h3,
+:root[data-theme="light"] .hero-home2 .path-selector-widget h3 {
+  color: #ffffff !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .hero-home2 .path-selector-widget p,
+html:not([data-theme="dark"]) body:not(.dark-mode) .hero-home2 .path-feature-item span,
+:root[data-theme="light"] .hero-home2 .path-selector-widget p,
+:root[data-theme="light"] .hero-home2 .path-feature-item span {
+  color: #dcd3c3 !important;
+}
+
+/* 3. Dark & Violet Sections in Light Mode */
+html:not([data-theme="dark"]) body:not(.dark-mode) .section-dark,
+:root[data-theme="light"] .section-dark {
+  background-color: #f7f3ec !important;
+  color: #1e1b18 !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .section-dark h1,
+html:not([data-theme="dark"]) body:not(.dark-mode) .section-dark h2,
+html:not([data-theme="dark"]) body:not(.dark-mode) .section-dark h3,
+html:not([data-theme="dark"]) body:not(.dark-mode) .section-dark h4 {
+  color: #1e1b18 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .section-dark p,
+html:not([data-theme="dark"]) body:not(.dark-mode) .section-dark .card-description {
+  color: #574e44 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .section-violet,
+:root[data-theme="light"] .section-violet {
+  background: linear-gradient(135deg, #f2e8fb 0%, #faf6fe 100%) !important;
+  color: #1e1b18 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .section-violet h1,
+html:not([data-theme="dark"]) body:not(.dark-mode) .section-violet h2,
+html:not([data-theme="dark"]) body:not(.dark-mode) .section-violet p {
+  color: #1e1b18 !important;
+}
+
+/* 4. Cards in Light Mode */
+html:not([data-theme="dark"]) body:not(.dark-mode) .theatre-card,
+html:not([data-theme="dark"]) body:not(.dark-mode) .theatre-card.dark-style,
+html:not([data-theme="dark"]) body:not(.dark-mode) .section-dark .theatre-card,
+html:not([data-theme="dark"]) body:not(.dark-mode) .dark-style,
+html:not([data-theme="dark"]) body:not(.dark-mode) .path-selector-widget,
+html:not([data-theme="dark"]) body:not(.dark-mode) .step-card,
+html:not([data-theme="dark"]) body:not(.dark-mode) .testimonial-card,
+html:not([data-theme="dark"]) body:not(.dark-mode) .section-dark .testimonial-card,
+html:not([data-theme="dark"]) body:not(.dark-mode) .faq-item,
+html:not([data-theme="dark"]) body:not(.dark-mode) .section-dark .faq-item,
+html:not([data-theme="dark"]) body:not(.dark-mode) .form-card,
+html:not([data-theme="dark"]) body:not(.dark-mode) .contact-form-card {
+  background: #ffffff !important;
+  color: #1e1b18 !important;
+  border: 1px solid rgba(245, 183, 0, 0.4) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07) !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .faq-question,
+html:not([data-theme="dark"]) body:not(.dark-mode) .section-dark .faq-question {
+  color: #1e1b18 !important;
+  background: transparent !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .faq-answer,
+html:not([data-theme="dark"]) body:not(.dark-mode) .section-dark .faq-answer {
+  color: #574e44 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .faq-icon,
+html:not([data-theme="dark"]) body:not(.dark-mode) .section-dark .faq-icon {
+  color: #b88300 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .testimonial-quote,
+html:not([data-theme="dark"]) body:not(.dark-mode) .section-dark .testimonial-quote {
+  color: #1e1b18 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .testimonial-author,
+html:not([data-theme="dark"]) body:not(.dark-mode) .section-dark .testimonial-author {
+  color: var(--curtain-crimson) !important;
+  font-weight: 700 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .testimonial-role,
+html:not([data-theme="dark"]) body:not(.dark-mode) .section-dark .testimonial-role {
+  color: #574e44 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .theatre-card h1,
+html:not([data-theme="dark"]) body:not(.dark-mode) .theatre-card h2,
+html:not([data-theme="dark"]) body:not(.dark-mode) .theatre-card h3,
+html:not([data-theme="dark"]) body:not(.dark-mode) .theatre-card .card-title,
+html:not([data-theme="dark"]) body:not(.dark-mode) .step-card .card-title,
+html:not([data-theme="dark"]) body:not(.dark-mode) .form-card h1,
+html:not([data-theme="dark"]) body:not(.dark-mode) .form-card h2 {
+  color: #1e1b18 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .theatre-card p,
+html:not([data-theme="dark"]) body:not(.dark-mode) .theatre-card .card-description,
+html:not([data-theme="dark"]) body:not(.dark-mode) .step-card p,
+html:not([data-theme="dark"]) body:not(.dark-mode) .form-card p,
+html:not([data-theme="dark"]) body:not(.dark-mode) .path-selector-widget p {
+  color: #574e44 !important;
+}
+
+/* 5. Corporate Banner & Closing CTA Sections in Light Mode */
+html:not([data-theme="dark"]) body:not(.dark-mode) .corporate-banner {
+  background: linear-gradient(135deg, #f5ecfc 0%, #fffbf2 100%) !important;
+  color: #1e1b18 !important;
+  border: 2px solid var(--spotlight-gold) !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .corporate-banner h2,
+html:not([data-theme="dark"]) body:not(.dark-mode) .corporate-banner h3 {
+  color: #1e1b18 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .corporate-banner p,
+html:not([data-theme="dark"]) body:not(.dark-mode) .corporate-banner li {
+  color: #574e44 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .cta-closing-section {
+  background: linear-gradient(135deg, #f2e5fa 0%, #ffffff 100%) !important;
+  color: #1e1b18 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .cta-closing-section h2,
+html:not([data-theme="dark"]) body:not(.dark-mode) .cta-closing-section p {
+  color: #1e1b18 !important;
+}
+
+/* 6. Auth Pages & LMS Dashboard in Light Mode */
+html:not([data-theme="dark"]) body:not(.dark-mode) .auth-main,
+html:not([data-theme="dark"]) body:not(.dark-mode) main#main-content.auth-main {
+  background: radial-gradient(circle at center, #f4ebfa 0%, #ffffff 90%) !important;
+  color: #1e1b18 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .auth-card-container {
+  background: #ffffff !important;
+  border: 2px solid var(--spotlight-gold) !important;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08) !important;
+  color: #1e1b18 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .auth-card-container h1,
+html:not([data-theme="dark"]) body:not(.dark-mode) .auth-card-container .card-title {
+  color: #1e1b18 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .auth-card-container .card-description,
+html:not([data-theme="dark"]) body:not(.dark-mode) .auth-card-container p,
+html:not([data-theme="dark"]) body:not(.dark-mode) .auth-card-container label {
+  color: #574e44 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .form-label,
+html:not([data-theme="dark"]) body:not(.dark-mode) .section-dark .form-label,
+html:not([data-theme="dark"]) body:not(.dark-mode) .auth-card-container .form-label {
+  color: #1e1b18 !important;
+}
+
+/* Comprehensive Form Controls (Inputs, Selects, Textareas) in Light Mode */
+html:not([data-theme="dark"]) .form-control,
+html:not([data-theme="dark"]) .section-dark .form-control,
+html:not([data-theme="dark"]) .contact-form-card .form-control,
+html:not([data-theme="dark"]) .form-card .form-control,
+html:not([data-theme="dark"]) .auth-card-container .form-control,
+:root[data-theme="light"] .form-control,
+:root[data-theme="light"] .section-dark .form-control {
+  background: #fbf9f5 !important;
+  border: 1.5px solid #dcd3c3 !important;
+  color: #1e1b18 !important;
+}
+
+html:not([data-theme="dark"]) .form-control::placeholder,
+html:not([data-theme="dark"]) .section-dark .form-control::placeholder,
+:root[data-theme="light"] .form-control::placeholder {
+  color: #887c6e !important;
+  opacity: 1 !important;
+}
+
+html:not([data-theme="dark"]) .form-control:focus,
+html:not([data-theme="dark"]) .section-dark .form-control:focus,
+:root[data-theme="light"] .form-control:focus {
+  background: #ffffff !important;
+  border-color: #b88300 !important;
+  box-shadow: 0 0 10px rgba(245, 183, 0, 0.35) !important;
+  color: #1e1b18 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .btn-social-auth {
+  background: #f7f3ec !important;
+  border: 1px solid #e2d8c8 !important;
+  color: #1e1b18 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .btn-social-auth:hover {
+  background: #ffffff !important;
+  border-color: var(--spotlight-gold) !important;
+  color: #1e1b18 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .auth-divider::before,
+html:not([data-theme="dark"]) body:not(.dark-mode) .auth-divider::after {
+  background: rgba(0, 0, 0, 0.12) !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .auth-divider span {
+  color: #7f7466 !important;
+}
+
+/* 7. Footer in Light Mode */
+html:not([data-theme="dark"]) body:not(.dark-mode) .site-footer {
+  background: #f4ece0 !important;
+  color: #574e44 !important;
+  border-top: 3px solid var(--curtain-crimson) !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .site-footer .footer-title {
+  color: #1e1b18 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .site-footer p,
+html:not([data-theme="dark"]) body:not(.dark-mode) .site-footer .footer-links-list a {
+  color: #4a4239 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .site-footer .footer-links-list a:hover {
+  color: var(--curtain-crimson) !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .map-top-bar,
+html:not([data-theme="dark"]) body:not(.dark-mode) .map-bottom-bar {
+  background: rgba(255, 255, 255, 0.94) !important;
+  color: #1e1b18 !important;
+  border-color: rgba(245, 183, 0, 0.5) !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* 8. LMS Dashboard App Shell, Topbar & Sidebar in Light Mode */
+html:not([data-theme="dark"]) body:not(.dark-mode).dashboard-body,
+html:not([data-theme="dark"]) body:not(.dark-mode) .app-shell,
+html:not([data-theme="dark"]) body:not(.dark-mode) .app-main-content {
+  background: #f4f6f9 !important;
+  color: #0f172a !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .app-topbar {
+  background: #ffffff !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .topbar-logo .logo-title {
+  color: #0f172a !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .app-sidebar {
+  background: #ffffff !important;
+  border-right: 1px solid #e2e8f0 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .app-sidebar .dash-tab-btn {
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  color: #64748b !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .app-sidebar .dash-tab-btn svg {
+  color: #64748b !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .app-sidebar .dash-tab-btn:hover {
+  background: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .app-sidebar .dash-tab-btn.active {
+  background: #e2e8f0 !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+  font-weight: 600 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .app-sidebar .dash-tab-btn.active svg {
+  color: #b88300 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .sidebar-logout-btn {
+  color: #64748b !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .sidebar-logout-btn svg {
+  color: #64748b !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .sidebar-logout-btn:hover {
+  background: #fee2e2 !important;
+  color: #dc2626 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .sidebar-logout-btn:hover svg {
+  color: #dc2626 !important;
+}
+
+/* Dashboard Header Card: ALWAYS Dark Violet Background & High-Contrast White/Gold Text */
+.dashboard-header-card,
+html:not([data-theme="dark"]) body:not(.dark-mode) .dashboard-header-card,
+:root[data-theme="light"] .dashboard-header-card {
+  background: linear-gradient(135deg, #2b1845 0%, #150a26 100%) !important;
+  color: #FFF8ED !important;
+  border: 1px solid var(--spotlight-gold) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+.dashboard-header-card h1,
+.dashboard-header-card .student-info-row h1,
+html:not([data-theme="dark"]) body:not(.dark-mode) .dashboard-header-card h1,
+html:not([data-theme="dark"]) body:not(.dark-mode) .dashboard-header-card .student-info-row h1,
+:root[data-theme="light"] .dashboard-header-card h1 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6) !important;
+}
+
+.dashboard-header-card p,
+.dashboard-header-card .student-info-row p,
+.dashboard-header-card .student-info-row span,
+html:not([data-theme="dark"]) body:not(.dark-mode) .dashboard-header-card p,
+html:not([data-theme="dark"]) body:not(.dark-mode) .dashboard-header-card .student-info-row p,
+:root[data-theme="light"] .dashboard-header-card p,
+:root[data-theme="light"] .dashboard-header-card .student-info-row p {
+  color: #dcd3c3 !important;
+}
+
+.dashboard-header-card strong,
+html:not([data-theme="dark"]) body:not(.dark-mode) .dashboard-header-card strong,
+:root[data-theme="light"] .dashboard-header-card strong {
+  color: #F5B700 !important;
+}
+
+.dashboard-header-card .section-tag,
+html:not([data-theme="dark"]) body:not(.dark-mode) .dashboard-header-card .section-tag,
+:root[data-theme="light"] .dashboard-header-card .section-tag {
+  color: #F5B700 !important;
+  border-color: #F5B700 !important;
+  background: rgba(245, 183, 0, 0.15) !important;
+}
+
+.dashboard-header-card .btn-outline,
+html:not([data-theme="dark"]) body:not(.dark-mode) .dashboard-header-card .btn-outline,
+:root[data-theme="light"] .dashboard-header-card .btn-outline {
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.dashboard-header-card .btn-outline:hover,
+html:not([data-theme="dark"]) body:not(.dark-mode) .dashboard-header-card .btn-outline:hover,
+:root[data-theme="light"] .dashboard-header-card .btn-outline:hover {
+  color: #F5B700 !important;
+  border-color: #F5B700 !important;
+  background: rgba(245, 183, 0, 0.2) !important;
+}
+
+/* Dashboard Panel Titles & Progression Tracker in Light Mode */
+html:not([data-theme="dark"]) body:not(.dark-mode) .dash-panel-title,
+html:not([data-theme="dark"]) body:not(.dark-mode) .dash-panel h2 {
+  color: #1e1b18 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .dash-panel-sub,
+html:not([data-theme="dark"]) body:not(.dark-mode) .dash-panel p {
+  color: #574e44 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .progress-track-wrapper {
+  background: #ffffff !important;
+  border: 1px solid rgba(245, 183, 0, 0.4) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07) !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .progress-track-title {
+  color: #1e1b18 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .progress-track-sub {
+  color: #574e44 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .progress-node {
+  background: #fbf8f3 !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .progress-node h4 {
+  color: #1e1b18 !important;
+}
+
+/* Tables in Light Mode */
+html:not([data-theme="dark"]) body:not(.dark-mode) .theatre-table {
+  background: #ffffff !important;
+  color: #1e1b18 !important;
+  border: 1px solid rgba(245, 183, 0, 0.3) !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .theatre-table th {
+  background: #f5eedf !important;
+  color: #1e1b18 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .theatre-table td {
+  color: #1e1b18 !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) .theatre-table tr:hover {
+  background: #faf5eb !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) #dashProgressionDetails blockquote {
+  color: #574e44 !important;
+}
+
+html:not([data-theme="dark"]) body:not(.dark-mode) #dashProgressionDetails div[style*="background: rgba"] {
+  background: #f8f4ec !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  color: #1e1b18 !important;
+}
+
+
+

@@ -112,3 +112,36 @@
 [dir="rtl"] .footer-bottom {
   flex-direction: row-reverse;
 }
+
+/* Dashboard Side Navigation RTL */
+[dir="rtl"] .app-sidebar {
+  border-right: none;
+  border-left: 1px solid #1f293d;
+}
+
+html:not([data-theme="dark"]) [dir="rtl"] .app-sidebar {
+  border-left: 1px solid #e2e8f0 !important;
+}
+
+[dir="rtl"] .dash-tab-btn,
+[dir="rtl"] .sidebar-logout-btn {
+  text-align: right;
+  flex-direction: row;
+}
+
+@media (max-width: 992px) {
+  [dir="rtl"] .dash-sidebar-toggle {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+
+  [dir="rtl"] .app-sidebar {
+    left: auto;
+    right: -285px;
+  }
+
+  [dir="rtl"] .app-sidebar.mobile-open {
+    transform: translateX(-285px);
+  }
+}
+
