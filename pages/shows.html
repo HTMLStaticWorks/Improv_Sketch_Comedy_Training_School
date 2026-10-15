@@ -10,9 +10,71 @@
   <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
   
   <!-- CSS Stylesheets -->
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261016c">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css?v=20261016c">
   <link rel="stylesheet" href="../assets/css/rtl.css" id="rtl-stylesheet" disabled>
+
+  <style>
+    /* Secondary Button visibility in Student Performers banner */
+    :root,
+    html:not([data-theme="dark"]),
+    body:not(.dark-mode) {
+      --student-btn-color: #C41E3A;
+      --student-btn-border: #C41E3A;
+      --student-btn-bg: #ffffff;
+    }
+
+    .btn-secondary-student {
+      color: var(--student-btn-color, #C41E3A) !important;
+      border: 2px solid var(--student-btn-border, #C41E3A) !important;
+      background: var(--student-btn-bg, #ffffff) !important;
+      box-shadow: 0 4px 14px rgba(196, 30, 58, 0.15) !important;
+      font-weight: 700 !important;
+      text-decoration: none !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      transition: all var(--transition-fast) !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+
+    .btn-secondary-student:hover,
+    .btn-secondary-student:focus,
+    .btn-secondary-student:active {
+      --student-btn-color: #ffffff;
+      --student-btn-border: #C41E3A;
+      --student-btn-bg: #C41E3A;
+      color: #ffffff !important;
+      background: #C41E3A !important;
+      border-color: #C41E3A !important;
+      box-shadow: 0 6px 18px rgba(196, 30, 58, 0.35) !important;
+      transform: translateY(-2px);
+    }
+
+    /* Dark Mode styles for Student Performers secondary button */
+    html[data-theme="dark"] .btn-secondary-student,
+    body.dark-mode .btn-secondary-student {
+      --student-btn-color: #ffffff;
+      --student-btn-border: rgba(255, 255, 255, 0.7);
+      --student-btn-bg: rgba(255, 255, 255, 0.08);
+      color: #ffffff !important;
+      border: 2px solid rgba(255, 255, 255, 0.7) !important;
+      background: rgba(255, 255, 255, 0.08) !important;
+      box-shadow: none !important;
+    }
+
+    html[data-theme="dark"] .btn-secondary-student:hover,
+    body.dark-mode .btn-secondary-student:hover {
+      --student-btn-color: #121212;
+      --student-btn-border: var(--spotlight-gold);
+      --student-btn-bg: var(--spotlight-gold);
+      background: var(--spotlight-gold) !important;
+      border-color: var(--spotlight-gold) !important;
+      color: #121212 !important;
+      transform: translateY(-2px) !important;
+    }
+  </style>
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -57,6 +119,7 @@
         <ul class="nav-links">
           <li><a href="index.html" class="nav-link">Home 1</a></li>
           <li><a href="home-2.html" class="nav-link">Home 2</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
           <li><a href="classes.html" class="nav-link">Classes</a></li>
           <li><a href="shows.html" class="nav-link active">Shows</a></li>
           <li><a href="instructors.html" class="nav-link">Instructors</a></li>
@@ -229,32 +292,74 @@
           <p>A glimpse into the unpredictable brilliance that happens on our stage every weekend.</p>
         </div>
 
-        <div class="card-grid grid-3">
-          <div class="theatre-card">
-            <div class="card-image-wrap">
+        <div class="playbill-archive-list">
+          <!-- Row 1: Harold Tournament -->
+          <div class="playbill-archive-row">
+            <div class="playbill-archive-media">
               <img src="../assets/images/show-harold-tournament.webp" alt="Summer Harold Tournament champions" width="400" height="250" loading="lazy">
             </div>
-            <div class="card-subtitle">July 2026 Residency</div>
-            <h3 class="card-title">Summer Harold Tournament</h3>
-            <p class="card-description">Over 16 troupes battled through three rounds of sudden-death long-form Harold scenes before a standing-room-only crowd.</p>
+            <div class="playbill-archive-details">
+              <div class="playbill-archive-meta">
+                <span class="playbill-season-tag">July 2026 Residency</span>
+                <span style="font-size: 0.82rem; color: var(--curtain-crimson); font-weight: 700;">Curtain: 8:00 PM</span>
+              </div>
+              <h3>Summer Harold Tournament Championship</h3>
+              <p>
+                Over 16 troupes battled through three rounds of sudden-death long-form Harold scenes before a standing-room-only crowd. Featured lightning-fast second-beat callbacks and a live judge panel.
+              </p>
+            </div>
+            <div class="playbill-archive-badge-col">
+              <div class="playbill-rating-stars">★★★★★</div>
+              <div class="playbill-stat-label">Box Office</div>
+              <div class="playbill-stat-value">SOLD OUT</div>
+              <span style="font-size: 0.72rem; color: var(--text-muted); margin-top: 4px;">Audience Score 99%</span>
+            </div>
           </div>
 
-          <div class="theatre-card">
-            <div class="card-image-wrap">
+          <!-- Row 2: Late Night Writers' Gala -->
+          <div class="playbill-archive-row">
+            <div class="playbill-archive-media">
               <img src="../assets/images/show-writers-gala.webp" alt="Special TV comedy writers night" width="400" height="250" loading="lazy">
             </div>
-            <div class="card-subtitle">May 2026 Special</div>
-            <h3 class="card-title">Late Night Writers' Gala</h3>
-            <p class="card-description">Our alumni writers from NYC late-night broadcasts returned to perform rejected monologue jokes and unaired musical sketches.</p>
+            <div class="playbill-archive-details">
+              <div class="playbill-archive-meta">
+                <span class="playbill-season-tag">May 2026 Special</span>
+                <span style="font-size: 0.82rem; color: var(--curtain-crimson); font-weight: 700;">Curtain: 9:30 PM</span>
+              </div>
+              <h3>Late Night Writers' Gala & Blackout Revue</h3>
+              <p>
+                Spotlight alumni writers from major NYC late-night broadcasts returned to perform rejected monologue packets, commercial parodies, and unaired musical sketch revues.
+              </p>
+            </div>
+            <div class="playbill-archive-badge-col">
+              <div class="playbill-rating-stars">★★★★★</div>
+              <div class="playbill-stat-label">Alumni Night</div>
+              <div class="playbill-stat-value">12 WRITERS</div>
+              <span style="font-size: 0.72rem; color: var(--text-muted); margin-top: 4px;">Emmy Nominated Cast</span>
+            </div>
           </div>
 
-          <div class="theatre-card">
-            <div class="card-image-wrap">
+          <!-- Row 3: Broadway Jam -->
+          <div class="playbill-archive-row">
+            <div class="playbill-archive-media">
               <img src="../assets/images/musical-improv-jam.jpg" alt="Musical improv extravaganza with pianist on stage" width="400" height="250" loading="lazy">
             </div>
-            <div class="card-subtitle">April 2026 Showcase</div>
-            <h3 class="card-title">The Unscripted Broadway Jam</h3>
-            <p class="card-description">An entire 90-minute Broadway musical improvised on the spot with live piano accompaniment based on the suggestion "Tax Season."</p>
+            <div class="playbill-archive-details">
+              <div class="playbill-archive-meta">
+                <span class="playbill-season-tag">April 2026 Showcase</span>
+                <span style="font-size: 0.82rem; color: var(--curtain-crimson); font-weight: 700;">Curtain: 8:00 PM</span>
+              </div>
+              <h3>The Unscripted Broadway Musical Jam</h3>
+              <p>
+                An entire 90-minute Broadway musical improvised live from start to finish with live grand piano accompaniment, chorus choreography, and vocal solos based on the audience suggestion "Tax Season."
+              </p>
+            </div>
+            <div class="playbill-archive-badge-col">
+              <div class="playbill-rating-stars">★★★★★</div>
+              <div class="playbill-stat-label">Live Orchestra</div>
+              <div class="playbill-stat-value">90 MIN</div>
+              <span style="font-size: 0.72rem; color: var(--text-muted); margin-top: 4px;">Standing Ovation</span>
+            </div>
           </div>
         </div>
       </div>
@@ -263,9 +368,9 @@
     <!-- ====================================================================
          SECTION 4: STUDENT SHOWCASE REGISTRATION EXPLAINER + CTA INTO DASHBOARD
          ==================================================================== -->
-    <section class="section section-dark">
+    <section class="section section-dark student-performers-section">
       <div class="container">
-        <div class="corporate-banner">
+        <div class="corporate-banner student-performers-banner">
           <div>
             <span class="section-tag gold">Student Performers</span>
             <h2 style="font-size: clamp(2rem, 3.5vw, 2.75rem); color: var(--marquee-cream); margin: 12px 0;">Are You An Enrolled Student? Register for Showcases</h2>
@@ -274,7 +379,7 @@
             </p>
             <div style="display: flex; gap: 14px; flex-wrap: wrap;">
               <a href="dashboard.html" class="btn btn-gold">Enter Student Portal & Claim Slot</a>
-              <a href="classes.html" class="btn btn-outline">Check Enrollment Requirements</a>
+              <a href="classes.html" class="btn btn-secondary-student" style="color: var(--student-btn-color, #C41E3A) !important; border: 2px solid var(--student-btn-border, #C41E3A) !important; background: var(--student-btn-bg, #ffffff) !important; font-weight: 700 !important; text-decoration: none !important; box-shadow: 0 4px 14px rgba(196, 30, 58, 0.15) !important;">Check Enrollment Requirements</a>
             </div>
           </div>
           <div style="display: flex; justify-content: center;">

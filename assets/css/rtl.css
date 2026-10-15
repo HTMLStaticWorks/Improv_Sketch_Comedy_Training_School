@@ -29,26 +29,42 @@
 [dir="rtl"] .header-container {
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+}
+
+[dir="rtl"] .site-logo {
+  flex-direction: row;
+  align-items: center;
+  height: var(--header-element-height, 44px);
 }
 
 [dir="rtl"] .site-nav {
   flex-direction: row;
   align-items: center;
-  gap: 28px;
+  gap: 24px;
+  height: var(--header-element-height, 44px);
 }
 
 [dir="rtl"] .nav-links {
   flex-direction: row;
   align-items: center;
-  gap: 24px;
+  gap: 6px;
   padding: 0;
   margin: 0;
+  height: var(--header-element-height, 44px);
+}
+
+[dir="rtl"] .nav-links li {
+  display: inline-flex;
+  align-items: center;
+  height: var(--header-element-height, 44px);
 }
 
 [dir="rtl"] .header-actions {
   flex-direction: row;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  height: var(--header-element-height, 44px);
 }
 
 /* Card Rules still require strictly center-aligned text & icons per Section 6 */

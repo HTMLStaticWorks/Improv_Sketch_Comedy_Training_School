@@ -10,9 +10,41 @@
   <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
   
   <!-- CSS Stylesheets -->
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/dark-mode.css">
-  <link rel="stylesheet" href="../assets/css/rtl.css" id="rtl-stylesheet" disabled>
+  <link rel="stylesheet" href="../assets/css/style.css?v=2.5">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css?v=2.5">
+  <link rel="stylesheet" href="../assets/css/rtl.css?v=2.5" id="rtl-stylesheet" disabled>
+
+  <style>
+    /* Instant high-contrast styling for Closing CTA Secondary Button */
+    .cta-closing-section .btn-secondary-advisor {
+      color: var(--curtain-crimson, #C41E3A) !important;
+      border: 2px solid var(--curtain-crimson, #C41E3A) !important;
+      background: #ffffff !important;
+      box-shadow: 0 4px 14px rgba(196, 30, 58, 0.15) !important;
+      font-weight: 700 !important;
+      text-decoration: none !important;
+    }
+    .cta-closing-section .btn-secondary-advisor:hover,
+    .cta-closing-section .btn-secondary-advisor:focus {
+      background: var(--curtain-crimson, #C41E3A) !important;
+      color: #ffffff !important;
+      border-color: var(--curtain-crimson, #C41E3A) !important;
+      box-shadow: 0 6px 22px rgba(196, 30, 58, 0.4) !important;
+    }
+    body.dark-mode .cta-closing-section .btn-secondary-advisor,
+    html[data-theme="dark"] .cta-closing-section .btn-secondary-advisor {
+      color: var(--spotlight-gold, #F5B700) !important;
+      border-color: var(--spotlight-gold, #F5B700) !important;
+      background: rgba(255, 255, 255, 0.06) !important;
+      box-shadow: 0 0 14px rgba(245, 183, 0, 0.25) !important;
+    }
+    body.dark-mode .cta-closing-section .btn-secondary-advisor:hover,
+    html[data-theme="dark"] .cta-closing-section .btn-secondary-advisor:hover {
+      background: var(--spotlight-gold, #F5B700) !important;
+      color: #121212 !important;
+      border-color: var(--spotlight-gold, #F5B700) !important;
+    }
+  </style>
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -47,6 +79,7 @@
         <ul class="nav-links">
           <li><a href="index.html" class="nav-link">Home 1</a></li>
           <li><a href="home-2.html" class="nav-link active">Home 2</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
           <li><a href="classes.html" class="nav-link">Classes</a></li>
           <li><a href="shows.html" class="nav-link">Shows</a></li>
           <li><a href="instructors.html" class="nav-link">Instructors</a></li>
@@ -190,37 +223,43 @@
           <p>We reject "trying to be clever" or forcing punchlines. Our pedagogical model is built on three unbreakable pillars of truthful comedic performance.</p>
         </div>
 
-        <div class="card-grid grid-3">
-          <div class="theatre-card">
-            <div class="card-image-wrap">
-              <img src="../assets/images/pillar-agreement.jpg" alt="Improv performers establishing agreement on stage" width="400" height="250" loading="lazy">
+        <div class="theatre-pillar-grid">
+          <!-- Pillar 1 -->
+          <div class="theatre-pillar-item">
+            <span class="pillar-watermark-number">01</span>
+            <div class="pillar-rule-tag">Rule 01: Agreement First</div>
+            <div style="border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 16px; aspect-ratio: 16/9;">
+              <img src="../assets/images/pillar-agreement.jpg" alt="Improv performers establishing agreement on stage" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
             </div>
-            <div class="card-subtitle">Pillar One</div>
-            <h3 class="card-title">Agreement Precedes Comedy</h3>
-            <p class="card-description">
-              You cannot find the absurd until you establish the normal. By building instant reality with your scene partner, any small eccentric shift explodes with authentic comedic impact.
+            <h3>Agreement Precedes Comedy</h3>
+            <p>
+              You cannot discover the absurd until you establish the normal. By building instant reality with your scene partner, any small eccentric shift explodes with authentic comedic impact.
             </p>
           </div>
 
-          <div class="theatre-card">
-            <div class="card-image-wrap">
-              <img src="../assets/images/pillar-emotion.jpg" alt="Expressive comedic performer showing authentic emotion on stage" width="400" height="250" loading="lazy">
+          <!-- Pillar 2 -->
+          <div class="theatre-pillar-item">
+            <span class="pillar-watermark-number">02</span>
+            <div class="pillar-rule-tag">Rule 02: High Stakes & Heart</div>
+            <div style="border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 16px; aspect-ratio: 16/9;">
+              <img src="../assets/images/pillar-emotion.jpg" alt="Expressive comedic performer showing authentic emotion on stage" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
             </div>
-            <div class="card-subtitle">Pillar Two</div>
-            <h3 class="card-title">Emotion Over Witty Jokes</h3>
-            <p class="card-description">
-              Audiences connect with vulnerability. When a character genuinely cares about an absurd premise, the audience laughs with their soul rather than merely smirking at a pun.
+            <h3>Emotion Over Witty Jokes</h3>
+            <p>
+              Audiences connect with vulnerability. When a character genuinely cares about an absurd premise, the audience laughs with their soul rather than merely smirking at an intellectual pun.
             </p>
           </div>
 
-          <div class="theatre-card">
-            <div class="card-image-wrap">
-              <img src="../assets/images/pillar-escalation.jpg" alt="Dynamic ensemble of improv performers heightening comedy stakes" width="400" height="250" loading="lazy">
+          <!-- Pillar 3 -->
+          <div class="theatre-pillar-item">
+            <span class="pillar-watermark-number">03</span>
+            <div class="pillar-rule-tag">Rule 03: Play The Game</div>
+            <div style="border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 16px; aspect-ratio: 16/9;">
+              <img src="../assets/images/pillar-escalation.jpg" alt="Dynamic ensemble of improv performers heightening comedy stakes" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
             </div>
-            <div class="card-subtitle">Pillar Three</div>
-            <h3 class="card-title">Rigorous Escalation</h3>
-            <p class="card-description">
-              A funny idea must never stay static. We teach students how to identify the "Game", heightening stakes through repetition, justification, and thematic callbacks.
+            <h3>Rigorous Escalation</h3>
+            <p>
+              A funny idea must never stay static. We teach students how to identify the "Game", heightening stakes through repetition, justification, and thematic callbacks across three distinct beats.
             </p>
           </div>
         </div>
@@ -384,9 +423,9 @@
         <p style="font-size: 1.15rem; color: var(--marquee-cream-muted); margin-bottom: 32px; line-height: 1.7;">
           Classes fill quickly. With cohorts capped strictly at 12 students to guarantee massive stage time, registration closes this Sunday at midnight.
         </p>
-        <div class="hero-cta-group" style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+        <div class="cta-actions-group" style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
           <a href="classes.html" class="btn btn-lg btn-primary">Enroll in Next Term ($295)</a>
-          <a href="contact.html" class="btn btn-lg btn-outline">Ask an Admissions Advisor</a>
+          <a href="contact.html" class="btn btn-lg btn-secondary-advisor" style="color: #C41E3A !important; border: 2px solid #C41E3A !important; background: #ffffff !important; font-weight: 700 !important; text-decoration: none !important;">Ask an Admissions Advisor</a>
         </div>
         <div style="margin-top: 24px; font-size: 0.85rem; color: var(--spotlight-gold);">
           ★ 100% Satisfaction Guarantee: If your first class doesn't delight you, receive a full refund.

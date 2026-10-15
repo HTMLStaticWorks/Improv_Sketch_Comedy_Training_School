@@ -10,9 +10,25 @@
   <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
   
   <!-- CSS Stylesheets -->
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/dark-mode.css">
-  <link rel="stylesheet" href="../assets/css/rtl.css" id="rtl-stylesheet" disabled>
+  <link rel="stylesheet" href="../assets/css/style.css?v=20261016f">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css?v=20261016f">
+  <link rel="stylesheet" href="../assets/css/rtl.css?v=20261016f" id="rtl-stylesheet" disabled>
+
+  <style>
+    :root,
+    html:not([data-theme="dark"]),
+    body:not(.dark-mode) {
+      --student-btn-color: #C41E3A;
+      --student-btn-border: #C41E3A;
+      --student-btn-bg: #ffffff;
+    }
+    body.dark-mode,
+    html[data-theme="dark"] {
+      --student-btn-color: #ffffff;
+      --student-btn-border: rgba(255, 255, 255, 0.7);
+      --student-btn-bg: rgba(255, 255, 255, 0.08);
+    }
+  </style>
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -51,6 +67,7 @@
         <ul class="nav-links">
           <li><a href="index.html" class="nav-link">Home 1</a></li>
           <li><a href="home-2.html" class="nav-link">Home 2</a></li>
+          <li><a href="about.html" class="nav-link active">About</a></li>
           <li><a href="classes.html" class="nav-link">Classes</a></li>
           <li><a href="shows.html" class="nav-link">Shows</a></li>
           <li><a href="instructors.html" class="nav-link">Instructors</a></li>
@@ -85,30 +102,213 @@
 
   <main id="main-content">
     <!-- ====================================================================
-         SECTION 1: OUR STORY
+         SECTION 1: HERO & THEATRICAL STAT RIBBON
          ==================================================================== -->
     <section class="page-hero page-hero-about" id="about-hero">
       <div class="container">
-        <div class="home2-grid" style="align-items: center;">
+        <div class="home2-grid" style="align-items: center; margin-bottom: var(--sp-6);">
           <div>
-            <span class="section-tag gold">Est. 2018 • NYC Theater District</span>
-            <h1 style="font-size: clamp(2.2rem, 4.5vw, 3.6rem); margin: 16px 0; color: #fff;">BUILT BY COMEDIANS, FOR COMEDIANS.</h1>
-            <p style="font-size: 1.12rem; color: var(--marquee-cream-muted); line-height: 1.7; margin-bottom: 20px;">
-              The Spotlight was born in the winter of 2018 when four veteran performers from Chicago's legendary Second City and LA's Groundlings pooled their savings to convert a shuttered vaudeville rehearsal space on 48th Street into a haven for unscripted theater.
+            <span class="section-tag gold">Est. 2018 • 412 Marquee Blvd, NYC</span>
+            <h1 class="about-hero-title">
+              WHERE COMEDIC INSTINCT BECOMES THEATRICAL MASTERY.
+            </h1>
+            <p class="about-hero-lead">
+              Founded in the winter of 2018 by veteran directors from Chicago’s legendary Second City and LA’s Groundlings, The Spotlight Comedy Academy is Manhattan’s premier conservatory dedicated to unscripted theater, long-form Harold improv, and sketch revue writers rooms.
             </p>
-            <p style="font-size: 1.05rem; color: var(--marquee-cream-muted); line-height: 1.7;">
-              Our mission was simple yet radical: replace toxic competition with joyful ensemble support, strip away theater bureaucracy, and give passionate students direct access to master directors who are actively shaping modern comedy.
+            <p class="about-hero-lead">
+              We operate as an active working black box theater where education and live stage performance are inseparable. Every student trains directly under working comedy directors and performs on our historic mainstage in front of real, ticketed New York audiences.
             </p>
           </div>
 
           <div style="display: flex; justify-content: center;">
-            <div class="theatre-card dark-style" style="border: 2px solid var(--spotlight-gold); width: 100%; max-width: 480px;">
-              <div class="card-image-wrap">
-                <img src="../assets/images/about-history.jpg" alt="The Spotlight historic comedy theatre marquee entrance lit at night" width="400" height="250" loading="lazy">
+            <div class="blueprint-card about-hero-blueprint" style="width: 100%; max-width: 480px; border: 2px solid var(--curtain-crimson); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);">
+              <div class="blueprint-header">
+                <span class="blueprint-badge">Conservatory Credential</span>
+                <span style="font-size: 0.82rem; color: var(--spotlight-gold); font-weight: 700;">NYC Theater District</span>
               </div>
-              <h3 class="card-title">412 Marquee Boulevard</h3>
-              <p class="card-description">
-                Our historic 90-seat black box theatre has hosted over 1,200 public performances, 40 student graduation cohorts, and dozens of touring comedy stars.
+              <div style="border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 14px;">
+                <img src="../assets/images/about-history.jpg" alt="The Spotlight historic comedy theatre marquee entrance lit at night" width="400" height="230" style="width: 100%; display: block; object-fit: cover;" loading="lazy">
+              </div>
+              <h3 class="about-card-title">412 Marquee Boulevard</h3>
+              <p class="about-card-desc">
+                A converted 1920s vaudeville rehearsal black box featuring 90 tiered velvet theater seats, a 32-channel DMX lighting grid, and dual backstage dressing wings.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Theatrical Stat Strip -->
+        <div class="theatre-stat-strip about-hero-stat-strip">
+          <div class="stat-pill">
+            <div class="stat-pill-num">1:12</div>
+            <div class="stat-pill-label">Capped Cohort Ratio</div>
+          </div>
+          <div class="stat-pill">
+            <div class="stat-pill-num">90</div>
+            <div class="stat-pill-label">Velvet Mainstage Seats</div>
+          </div>
+          <div class="stat-pill">
+            <div class="stat-pill-num">1,200+</div>
+            <div class="stat-pill-label">Live Shows Staged</div>
+          </div>
+          <div class="stat-pill">
+            <div class="stat-pill-num">100%</div>
+            <div class="stat-pill-label">Live Stage Guarantee</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 2: CONSERVATORY MANIFESTO (Asymmetric Magazine Editorial)
+         ==================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="manifesto-editorial-grid">
+          <div>
+            <span class="section-tag" style="border-color: var(--curtain-crimson); color: var(--curtain-crimson);">Our Pedagogical Mission</span>
+            <h2 style="font-size: clamp(2rem, 3.8vw, 3rem); margin: 16px 0; line-height: 1.2;">
+              THE DEATH OF DEFENSIVE IRONY.
+            </h2>
+            <p style="font-size: 1.08rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 18px;">
+              Most amateur improv fails for a single reason: fear. When actors feel insecure on stage, they retreat into cynical sarcasm, "clever" one-liners, and defensive arguments. It generates scattered chuckles, but never transcendent theater.
+            </p>
+            <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 18px;">
+              At The Spotlight, our curriculum dismantles defensive irony. We teach actors how to care deeply about their scene partner's needs. When an ensemble supports each other with radical psychological safety, fear disappears—and when fear disappears, uncontrollable, brilliant laughter takes its place.
+            </p>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px;">
+              <span class="pillar-tag-pill">Ensemble Safety</span>
+              <span class="pillar-tag-pill">No Assembly-Line Classes</span>
+              <span class="pillar-tag-pill">Working Directors Only</span>
+              <span class="pillar-tag-pill">Direct Stage Feedback</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="manifesto-quote-box">
+              <p style="font-size: 1.15rem; font-style: italic; line-height: 1.75; color: var(--text-primary); margin-bottom: 18px;">
+                "We don't teach punchlines. Punchlines are cheap tricks that expire in seconds. We teach actors how to listen with their entire nervous system until the truth of the moment makes laughter completely unavoidable."
+              </p>
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <div class="director-avatar-badge">
+                  SL
+                </div>
+                <div>
+                  <div style="font-weight: 700; color: var(--text-primary);">Sarah Lin</div>
+                  <div style="font-size: 0.85rem; color: var(--curtain-crimson); font-weight: 600;">Artistic Director & Co-Founder</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 3: THE 4 PILLARS OF TRAINING (Staggered Narrative Strips)
+         ==================================================================== -->
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag gold">Theatrical Curriculum</span>
+          <h2>The 4 Pillars of The Spotlight Conservatory</h2>
+          <div class="marquee-divider">
+            <span class="line"></span>
+            <span class="bulb"></span>
+            <span class="bulb"></span>
+            <span class="bulb"></span>
+            <span class="line"></span>
+          </div>
+          <p>A rigorous, conservatory-grade methodology synthesizing Chicago ensemble improv with New York sketch revue production.</p>
+        </div>
+
+        <div class="pillars-flow-container">
+          <!-- Pillar 1 -->
+          <div class="pillar-strip">
+            <div class="pillar-index">01</div>
+            <div class="pillar-details">
+              <h3>Organic Unscripted Improv & The Harold</h3>
+              <p>
+                From fundamental "Yes, And" agreement in Level 1 to full 30-minute long-form Harold architectures in Level 4. Students learn active listening, premise discovery, environment work, status shifts, and seamless third-beat callback integration.
+              </p>
+              <div class="pillar-tag-row">
+                <span class="pillar-tag-pill">Active Agreement</span>
+                <span class="pillar-tag-pill">Group Mind Beats</span>
+                <span class="pillar-tag-pill">Monoscenes</span>
+              </div>
+            </div>
+            <div class="pillar-sidebar-widget">
+              <div style="font-weight: 700; color: var(--curtain-crimson); margin-bottom: 6px;">Scene Rule: Heighten Truth</div>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">
+                "Agreement is only the foundation. Mastery begins when both actors enthusiastically justify and heighten the unusual thing into high comedy."
+              </p>
+            </div>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="pillar-strip">
+            <div class="pillar-index">02</div>
+            <div class="pillar-details">
+              <h3>The Writers' Room Sketch Lab</h3>
+              <p>
+                Modeled after Saturday Night Live and network writers rooms. Students pitch 10 premises weekly, conduct rigorous ensemble table reads, polish through collaborative punch-up rounds, and master the 3-beat sketch escalation formula.
+              </p>
+              <div class="pillar-tag-row">
+                <span class="pillar-tag-pill">Table Reads</span>
+                <span class="pillar-tag-pill">Punch-Up Rounds</span>
+                <span class="pillar-tag-pill">Digital Shorts</span>
+              </div>
+            </div>
+            <div class="pillar-sidebar-widget">
+              <div class="script-excerpt">
+                <strong>INT. COFFEE SHOP - DAY</strong><br>
+                SARAH (deadpan)<br>
+                I asked for light roast. This has the gravitational pull of a dying star.<br>
+                <em>(Barista places lead apron over her)</em>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="pillar-strip">
+            <div class="pillar-index">03</div>
+            <div class="pillar-details">
+              <h3>Physical Comedy, Clowning & Kinetic Presence</h3>
+              <p>
+                Drawing from Jacques Lecoq mask technique and commedia dell'arte. We teach students how to command the physical space of a black box theater through rhythmic slapstick, spatial dominance, vocal resonators, and micro-expressions without relying solely on verbal wit.
+              </p>
+              <div class="pillar-tag-row">
+                <span class="pillar-tag-pill">Lecoq Technique</span>
+                <span class="pillar-tag-pill">Spatial Anchors</span>
+                <span class="pillar-tag-pill">Vocal Resonance</span>
+              </div>
+            </div>
+            <div class="pillar-sidebar-widget">
+              <div style="font-weight: 700; color: var(--spotlight-gold); margin-bottom: 6px;">Kinetic Tempo Scale</div>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">
+                Training physical pacing across 5 distinct stage tempos: from deliberate stillness to explosive kinetic chaos with zero hesitation.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="pillar-strip">
+            <div class="pillar-index">04</div>
+            <div class="pillar-details">
+              <h3>The Professional Mainstage Resident Pipeline</h3>
+              <p>
+                Graduation isn’t the finish line—it’s your stage entrance. Graduates are eligible to audition for our 6 fully compensated resident house teams, guest on Friday Cagematches, and showcase before invited NYC agents, managers, and casting directors.
+              </p>
+              <div class="pillar-tag-row">
+                <span class="pillar-tag-pill">Paid House Troupes</span>
+                <span class="pillar-tag-pill">Agent Showcases</span>
+                <span class="pillar-tag-pill">Festival Ensembles</span>
+              </div>
+            </div>
+            <div class="pillar-sidebar-widget">
+              <div style="font-weight: 700; color: var(--curtain-crimson); margin-bottom: 6px;">Artist Compensation</div>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">
+                Resident ensemble members receive paid performance stipends for every weekend slot plus complimentary rehearsal studio bookings.
               </p>
             </div>
           </div>
@@ -117,68 +317,13 @@
     </section>
 
     <!-- ====================================================================
-         SECTION 2: MISSION & VALUES (3D Tilt Cards)
-         ==================================================================== -->
-    <section class="section section-dark">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag gold">Our Theatrical DNA</span>
-          <h2>The Spotlight Core Code of Conduct</h2>
-          <div class="marquee-divider">
-            <span class="line"></span>
-            <span class="bulb"></span>
-            <span class="bulb"></span>
-            <span class="bulb"></span>
-            <span class="line"></span>
-          </div>
-          <p>We believe comedy is at its most transcendent when everyone on stage feels completely safe to take enormous creative risks.</p>
-        </div>
-
-        <div class="card-grid grid-3">
-          <div class="theatre-card dark-style">
-            <div class="card-icon-wrap gold">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-            </div>
-            <div class="card-subtitle">Value 01</div>
-            <h3 class="card-title">Radical Ensemble Trust</h3>
-            <p class="card-description">
-              The golden rule of improv: Make your scene partner look like a genius. When every person prioritizes their partner’s success over their own ego, brilliance happens naturally.
-            </p>
-          </div>
-
-          <div class="theatre-card dark-style">
-            <div class="card-icon-wrap">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-            </div>
-            <div class="card-subtitle">Value 02</div>
-            <h3 class="card-title">Celebrate Every Failure</h3>
-            <p class="card-description">
-              A flat joke isn’t a tragedy; it’s an invitation to explore something new. We treat missed beats as hilarious learning data that fuels your next breakthrough.
-            </p>
-          </div>
-
-          <div class="theatre-card dark-style">
-            <div class="card-icon-wrap gold">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
-            </div>
-            <div class="card-subtitle">Value 03</div>
-            <h3 class="card-title">Radically Inclusive Stage</h3>
-            <p class="card-description">
-              Comedy flourishes when diverse life experiences converge. We actively champion scholarship programs, BIPOC ensembles, LGBTQ+ jams, and accessible classes.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ====================================================================
-         SECTION 3: MILESTONES & TIMELINE
+         SECTION 4: CAMPUS & VENUE BLUEPRINT (Architectural Showcase)
          ==================================================================== -->
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Historical Milestones</span>
-          <h2>Our Journey In The Lights</h2>
+          <span class="section-tag" style="border-color: var(--curtain-crimson); color: var(--curtain-crimson);">Campus Facilities</span>
+          <h2>A Real Working Theater District Campus</h2>
           <div class="marquee-divider">
             <span class="line"></span>
             <span class="bulb"></span>
@@ -186,54 +331,366 @@
             <span class="bulb"></span>
             <span class="line"></span>
           </div>
-          <p>Key moments that shaped The Spotlight into New York’s home for theatrical improv.</p>
+          <p>Train in acoustically optimized, performance-ready black boxes built for actors, writers, and ensemble creators.</p>
         </div>
 
-        <div class="card-grid grid-4">
-          <div class="theatre-card">
-            <div class="card-badge">2018</div>
-            <div class="card-subtitle">The Inception</div>
-            <h3 class="card-title">Doors Open</h3>
-            <p class="card-description">First Level 1 cohort launches with 12 brave students in our newly renovated black box stage.</p>
+        <div class="campus-blueprint-container">
+          <!-- Venue 1 -->
+          <div class="blueprint-card">
+            <div class="blueprint-header">
+              <h3 class="blueprint-card-title">The Mainstage Black Box</h3>
+              <span class="blueprint-badge">412 Marquee Blvd</span>
+            </div>
+            <p class="blueprint-card-desc">
+              Our flagship theatrical home. 90 plush velvet seats on a steep raked riser ensuring unobstructed sightlines for every audience member.
+            </p>
+            <ul class="blueprint-specs-list">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                32-Channel Electronic DMX Spotlight Grid & Color Changers
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Direct Soundboard Multi-Track Recording for Student Reels
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Dual Wing Backstage with Dedicated Green Room Monitors
+              </li>
+            </ul>
           </div>
 
-          <div class="theatre-card">
-            <div class="card-badge">2020</div>
-            <div class="card-subtitle">Global Reach</div>
-            <h3 class="card-title">Digital Studio</h3>
-            <p class="card-description">Pioneered interactive Zoom long-form improv labs, training over 800 international students during lockdowns.</p>
+          <!-- Venue 2 -->
+          <div class="blueprint-card">
+            <div class="blueprint-header">
+              <h3 class="blueprint-card-title">The Rehearsal Annex (Studios A, B & C)</h3>
+              <span class="blueprint-badge blueprint-badge-violet">2nd Floor Annex</span>
+            </div>
+            <p class="blueprint-card-desc">
+              Three spacious rehearsal studios equipped with floating sprung maple hardwood floors designed to protect actors’ joints during physical comedy.
+            </p>
+            <ul class="blueprint-specs-list">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Full-Wall Acoustic Draping & Reversible Rehearsal Mirrors
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Wall-Mounted 4K Playback Monitors for Instant Scene Review
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Upright Rehearsal Pianos in Studios A & B for Musical Improv
+              </li>
+            </ul>
           </div>
 
-          <div class="theatre-card">
-            <div class="card-badge">2023</div>
-            <div class="card-subtitle">Mainstage Expansion</div>
-            <h3 class="card-title">Resident Troupe Program</h3>
-            <p class="card-description">Launched 6 fully compensated resident house teams with weekly paid Friday & Saturday weekend slots.</p>
+          <!-- Venue 3 -->
+          <div class="blueprint-card">
+            <div class="blueprint-header">
+              <h3 class="blueprint-card-title">The Writers' Lounge & Green Room</h3>
+              <span class="blueprint-badge blueprint-badge-violet">Creative Hub</span>
+            </div>
+            <p class="blueprint-card-desc">
+              A collaborative writers sanctuary featuring a 14-person oak table-read station, cork pitch walls, reference comedy library, and espresso bar.
+            </p>
+            <ul class="blueprint-specs-list">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Extensive Archive of 400+ Original Sketches & Television Pilot Scripts
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Dedicated 4-Mic Soundproof Podcast & Voiceover Recording Booth
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                High-Speed Laser Printing for Table-Read Script Copies
+              </li>
+            </ul>
           </div>
 
-          <div class="theatre-card">
-            <div class="card-badge">2026</div>
-            <div class="card-subtitle">The Future</div>
-            <h3 class="card-title">The Underground Lab</h3>
-            <p class="card-description">Breaking ground on our second 65-seat black box experimental sketch venue right beneath 412 Marquee Blvd.</p>
+          <!-- Venue 4 -->
+          <div class="blueprint-card">
+            <div class="blueprint-header">
+              <h3 class="blueprint-card-title">The Underground Lab (Late 2026)</h3>
+              <span class="blueprint-badge blueprint-badge-gold">Under Construction</span>
+            </div>
+            <p class="blueprint-card-desc">
+              Breaking ground directly beneath 412 Marquee Blvd. A raw 65-seat subterranean space dedicated to experimental sketch previews and dark comedy revues.
+            </p>
+            <ul class="blueprint-specs-list">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Intimate 360-Degree Thrust Staging Configuration
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Late-Night Midnight Comedy Workshop Lab Access for Students
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Direct Underground Rehearsal Green Room Tunnel Connection
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ====================================================================
-         SECTION 4: COMMUNITY CTA
+         SECTION 5: THEATRICAL TIMELINE RIBBON (Continuous Narrative)
          ==================================================================== -->
-    <section class="section section-dark" style="text-align: center;">
-      <div class="container" style="max-width: 820px;">
-        <span class="section-tag gold">Become Part of the Family</span>
-        <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin: 16px 0;">YOUR ENSEMBLE IS WAITING FOR YOU</h2>
-        <p style="font-size: 1.15rem; color: var(--marquee-cream-muted); line-height: 1.7; margin-bottom: 32px;">
-          Whether you want to overcome stage fright, become a sharper communicator, or write for television, your seat in our circle is ready.
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag gold">Our Legacy</span>
+          <h2>The Journey In The Footlights</h2>
+          <div class="marquee-divider">
+            <span class="line"></span>
+            <span class="bulb"></span>
+            <span class="bulb"></span>
+            <span class="bulb"></span>
+            <span class="line"></span>
+          </div>
+          <p>Key historical milestones that built The Spotlight into Manhattan’s theatrical comedy home.</p>
+        </div>
+
+        <div class="stage-timeline-track">
+          <!-- Event 1 -->
+          <div class="timeline-event-row">
+            <div class="timeline-event-node">01</div>
+            <div class="timeline-event-content">
+              <div class="timeline-event-year">2018</div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 6px;">The Vaudeville Hall Awakening</h3>
+              <p style="font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                Four ensemble actors pool their savings to renovate a shuttered vaudeville theater at 412 Marquee Blvd. The first Level 1 cohort of 12 students debuts under sweeping halogen footlights.
+              </p>
+            </div>
+          </div>
+
+          <!-- Event 2 -->
+          <div class="timeline-event-row">
+            <div class="timeline-event-node">02</div>
+            <div class="timeline-event-content">
+              <div class="timeline-event-year">2020</div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 6px;">Global Digital Comedy Studio</h3>
+              <p style="font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                During theater closures, The Spotlight pioneers high-engagement streaming improv formats, training 800+ international actors across 18 countries in real-time spontaneous scene work.
+              </p>
+            </div>
+          </div>
+
+          <!-- Event 3 -->
+          <div class="timeline-event-row">
+            <div class="timeline-event-node">03</div>
+            <div class="timeline-event-content">
+              <div class="timeline-event-year">2023</div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 6px;">Resident Troupe Program Launched</h3>
+              <p style="font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                Establishes 6 weekly paid resident house teams, ensuring conservatory graduates earn performance stipends, professional credits, and guaranteed weekend billing.
+              </p>
+            </div>
+          </div>
+
+          <!-- Event 4 -->
+          <div class="timeline-event-row">
+            <div class="timeline-event-node">04</div>
+            <div class="timeline-event-content">
+              <div class="timeline-event-year">2025</div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 6px;">Network Writers Showcase</h3>
+              <p style="font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                Partnership with prominent television networks brings top literary agents and showrunners to annual student sketch table-reads, resulting in over 30 staffing placements.
+              </p>
+            </div>
+          </div>
+
+          <!-- Event 5 -->
+          <div class="timeline-event-row">
+            <div class="timeline-event-node">05</div>
+            <div class="timeline-event-content">
+              <div class="timeline-event-year">2026</div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 6px;">The Underground Black Box Lab</h3>
+              <p style="font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                Groundbreaking on our second 65-seat subterranean black box theater directly beneath 412 Marquee Blvd, expanding student stage access by 60%.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 6: DIRECTORIAL FACULTY (Playbill Magazine Format)
+         ==================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" style="border-color: var(--curtain-crimson); color: var(--curtain-crimson);">Master Directors</span>
+          <h2>The Artistic Direction of The Spotlight</h2>
+          <div class="marquee-divider">
+            <span class="line"></span>
+            <span class="bulb"></span>
+            <span class="bulb"></span>
+            <span class="bulb"></span>
+            <span class="line"></span>
+          </div>
+          <p>Every instructor at The Spotlight is an active director with mainstage production credits and professional pedigree.</p>
+        </div>
+
+        <div class="playbill-grid">
+          <!-- Director 1 -->
+          <div class="playbill-card">
+            <img src="../assets/images/instructor-sarah.webp" alt="Sarah Lin - Artistic Director" class="playbill-portrait" loading="lazy">
+            <div class="playbill-info">
+              <h3>Sarah Lin</h3>
+              <div class="playbill-role">Artistic Director & Co-Founder</div>
+              <p class="playbill-quote">
+                "When an actor stops trying to win the argument and instead allows themselves to be profoundly affected by their scene partner, the room explodes with laughter."
+              </p>
+              <div style="font-size: 0.8rem; color: var(--curtain-crimson); font-weight: 700; margin-top: 6px;">
+                8 Seasons Second City Chicago • NBC Diversity Fellow
+              </div>
+            </div>
+          </div>
+
+          <!-- Director 2 -->
+          <div class="playbill-card">
+            <img src="../assets/images/instructor-marcus.webp" alt="Marcus Vance - Head of Sketch" class="playbill-portrait" loading="lazy">
+            <div class="playbill-info">
+              <h3>Marcus Vance</h3>
+              <div class="playbill-role">Head of Sketch Writing</div>
+              <p class="playbill-quote">
+                "Great sketch comedy isn’t random absurdity; it’s airtight logic applied fearlessly to an insane initial premise."
+              </p>
+              <div style="font-size: 0.8rem; color: var(--curtain-crimson); font-weight: 700; margin-top: 6px;">
+                Former SNL Guest Writer • Peabody Award Nominee
+              </div>
+            </div>
+          </div>
+
+          <!-- Director 3 -->
+          <div class="playbill-card">
+            <img src="../assets/images/instructor-elena.webp" alt="Elena Rostova - Physical Comedy" class="playbill-portrait" loading="lazy">
+            <div class="playbill-info">
+              <h3>Elena Rostova</h3>
+              <div class="playbill-role">Master of Physical Comedy</div>
+              <p class="playbill-quote">
+                "Your intellect will only get you through the first 30 seconds of a scene. Your body carries the truth of who your character really is."
+              </p>
+              <div style="font-size: 0.8rem; color: var(--curtain-crimson); font-weight: 700; margin-top: 6px;">
+                Jacques Lecoq Paris Graduate • Off-Broadway Movement Director
+              </div>
+            </div>
+          </div>
+
+          <!-- Director 4 -->
+          <div class="playbill-card">
+            <img src="../assets/images/instructor-david.webp" alt="David O'Reilly - Long-Form Director" class="playbill-portrait" loading="lazy">
+            <div class="playbill-info">
+              <h3>David O'Reilly</h3>
+              <div class="playbill-role">Director of Long-Form Curriculum</div>
+              <p class="playbill-quote">
+                "The Harold is like jazz: once you internalize the chord changes, you can improvise symphonies in real time."
+              </p>
+              <div style="font-size: 0.8rem; color: var(--curtain-crimson); font-weight: 700; margin-top: 6px;">
+                The Groundlings Sunday Company • 15-Year NYC Stage Veteran
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 7: WORK-STUDY FELLOWSHIPS & ACCESSIBLE TUITION
+         ==================================================================== -->
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag gold">Accessible Theater</span>
+          <h2>Tuition Transparency & Fellowship Support</h2>
+          <div class="marquee-divider">
+            <span class="line"></span>
+            <span class="bulb"></span>
+            <span class="bulb"></span>
+            <span class="bulb"></span>
+            <span class="line"></span>
+          </div>
+          <p>We firmly believe that economic barriers should never prevent extraordinary comedic talent from claiming their spotlight.</p>
+        </div>
+
+        <div class="fellowship-split-container">
+          <div class="fellowship-banner-panel">
+            <div class="fellowship-header-row">
+              <span class="pillar-tag-pill pillar-tag-pill-crimson">100% Full Tuition Grant</span>
+              <span class="fellowship-spots-badge">6 Spots Every Term</span>
+            </div>
+            <h3 style="font-size: 1.45rem; margin-bottom: 10px;">The Box Office Work-Study Fellowship</h3>
+            <p style="font-size: 0.98rem; line-height: 1.7; margin-bottom: 14px;">
+              In exchange for assisting 4 hours weekly with front-of-house ticketing and house management, fellowship students receive 100% complimentary tuition across any 8-week core conservatory level.
+            </p>
+            <ul class="blueprint-specs-list" style="margin-bottom: 20px;">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Zero out-of-pocket tuition or materials fees
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Mentorship from theatre house managers & directors
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Unlimited free admission to all weekend mainstage shows
+              </li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center; justify-content: center;">Apply for Work-Study Fellowship</a>
+          </div>
+
+          <div class="fellowship-banner-panel" style="border-color: var(--spotlight-gold);">
+            <div class="fellowship-header-row">
+              <span class="pillar-tag-pill pillar-tag-pill-gold">Flexible Financing</span>
+              <span class="fellowship-spots-badge">0% Interest</span>
+            </div>
+            <h3 style="font-size: 1.45rem; margin-bottom: 10px;">Diversity Grants & 2-Part Installments</h3>
+            <p style="font-size: 0.98rem; line-height: 1.7; margin-bottom: 14px;">
+              We provide dedicated BIPOC & LGBTQ+ community grants covering 50% to 75% of tuition, plus automatic 2-part interest-free split billing through Stripe, Apple Pay, and PayPal at checkout.
+            </p>
+            <ul class="blueprint-specs-list" style="margin-bottom: 20px;">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                BIPOC & LGBTQ+ Emerging Performer Grants
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                50% down at registration, remaining 50% at Week 4
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                100% Satisfaction Guarantee: Full refund after Class 1
+              </li>
+            </ul>
+            <a href="classes.html" class="btn btn-gold" style="width: 100%; text-align: center; justify-content: center;">Explore Class Schedules & Rates</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 8: FINAL THEATRICAL CALL TO STAGE (Closing Conversion)
+         ==================================================================== -->
+    <section class="section" style="text-align: center;">
+      <div class="container" style="max-width: 860px;">
+        <span class="section-tag" style="border-color: var(--curtain-crimson); color: var(--curtain-crimson);">Your Seat Is Waiting</span>
+        <h2 style="font-size: clamp(2.2rem, 4.5vw, 3.4rem); margin: 16px 0; line-height: 1.2;">
+          YOUR ENSEMBLE IS WAITING FOR YOU.
+        </h2>
+        <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.75; margin-bottom: 32px;">
+          Whether your dream is overcoming stage hesitation, writing for television, or performing unscripted comedy in a historic New York black box, your place in our circle is ready.
         </p>
-        <div class="hero-cta-group" style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-          <a href="classes.html" class="btn btn-lg btn-gold">Browse Upcoming Classes</a>
-          <a href="shows.html" class="btn btn-lg btn-outline">Watch This Weekend's Show</a>
+        <div class="about-closing-cta-group">
+          <a href="classes.html" class="btn btn-lg btn-primary about-closing-btn">Browse Upcoming Classes ($295)</a>
+          <a href="shows.html" class="btn btn-lg btn-secondary-student about-closing-btn">Watch This Weekend's Show</a>
         </div>
       </div>
     </section>
