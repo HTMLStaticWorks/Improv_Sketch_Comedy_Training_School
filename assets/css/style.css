@@ -4264,12 +4264,17 @@ html:not([data-theme="dark"]) body:not(.dark-mode) :not(.page-hero):not(.hero-ho
 .page-hero-about h1 {
   color: #ffffff !important;
   text-shadow: 0 4px 24px rgba(0, 0, 0, 0.95), 0 0 30px rgba(245, 183, 0, 0.4) !important;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.1;
 }
 
 .page-hero-about .about-hero-lead,
 .page-hero-about p.about-hero-lead {
   color: #FFF8ED !important;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9) !important;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  max-width: 540px;
 }
 
 /* Credential Card in About Hero: Ensure Dark Text on White Card in Light Mode */
@@ -5901,20 +5906,22 @@ html:not([data-theme="dark"]) body:not(.dark-mode) #dashProgressionDetails div[s
   grid-column: span 2;
 }
 
+/* Hero card is always a dark stage surface, so its text uses fixed light colors
+   (--marquee-cream flips to a dark tone in light mode). */
 .bento-card-hero {
   background: linear-gradient(135deg, rgba(45, 27, 78, 0.95) 0%, rgba(18, 18, 18, 0.98) 100%);
-  color: var(--marquee-cream);
+  color: #FFF8ED;
   border: 2px solid var(--spotlight-gold);
 }
 
 .bento-card-hero h3 {
-  color: var(--marquee-cream);
+  color: #FFF8ED !important;
   font-size: 1.5rem;
   margin: 12px 0;
 }
 
 .bento-card-hero p {
-  color: var(--marquee-cream-muted);
+  color: #e8dfcf !important;
   font-size: 1rem;
   line-height: 1.7;
 }
